@@ -1,4 +1,5 @@
 ﻿using Oracle.DataAccess.Client;
+using System;
 using System.Data;
 
 namespace mvcComputersCompany.datos

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Oracle.DataAccess.Client;
 using System.Data;
 
@@ -47,7 +43,7 @@ namespace mvcComputersCompany.datos
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
                 DataSet varDataSet = new DataSet();
-                // Testing new parameters
+
                 myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2).Value = prmNombreEmpresa;
                 myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2).Value = prmMarcaPortatil;
                 myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
