@@ -32,14 +32,6 @@ namespace mvcComputersCompany.datos
                 return "ERROR: " + e.Message;
             }
         }
-
-
-        //public OracleConnection getMyConnection() 
-        //{
-        //    myConnection.Open();
-        //    return myConnection;
-        //}
-
         public void ComprobarConnection()
         {
             if (myConnection.State == ConnectionState.Open)
