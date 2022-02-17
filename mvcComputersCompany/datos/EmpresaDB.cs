@@ -11,6 +11,7 @@ namespace mvcComputersCompany.datos
         public string InsertarEmpresa(int prmNit, string prmNombre, DateTime prmFechaCreacion) {
             try
             {
+                atrConnecionDB.getMyConnection().Open();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarEmpresa", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
                 

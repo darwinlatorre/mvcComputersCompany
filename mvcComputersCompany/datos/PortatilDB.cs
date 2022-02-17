@@ -12,6 +12,7 @@ namespace mvcComputersCompany.datos
         {
             try
             {
+                atrConnecionDB.getMyConnection().Open();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
 
@@ -40,6 +41,7 @@ namespace mvcComputersCompany.datos
 
             try
             {
+                atrConnecionDB.getMyConnection().Open();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
                 DataSet varDataSet = new DataSet();
@@ -47,7 +49,6 @@ namespace mvcComputersCompany.datos
                 myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2).Value = prmNombreEmpresa;
                 myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2).Value = prmMarcaPortatil;
                 myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-                
                 
                 OracleDataAdapter varAdapter = new OracleDataAdapter(myCommand);
                 varAdapter.Fill(varDataSet, "Portatiles Por Marca");
