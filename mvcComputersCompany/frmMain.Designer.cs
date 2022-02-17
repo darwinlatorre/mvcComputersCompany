@@ -32,6 +32,7 @@ namespace mvcComputersCompany
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlForms = new System.Windows.Forms.Panel();
+            this.pnlStatus = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.backGroundImage = new System.Windows.Forms.PictureBox();
             this.pnlBarraMenu = new System.Windows.Forms.Panel();
@@ -45,19 +46,18 @@ namespace mvcComputersCompany
             this.btnRegistrarPortatil = new System.Windows.Forms.Button();
             this.btnRegistrarEmpresa = new System.Windows.Forms.Button();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlForms.SuspendLayout();
+            this.pnlStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).BeginInit();
             this.pnlBarraMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -75,13 +75,22 @@ namespace mvcComputersCompany
             // pnlForms
             // 
             this.pnlForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
-            this.pnlForms.Controls.Add(this.panel1);
+            this.pnlForms.Controls.Add(this.pnlStatus);
             this.pnlForms.Controls.Add(this.backGroundImage);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForms.Location = new System.Drawing.Point(150, 40);
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Size = new System.Drawing.Size(650, 560);
             this.pnlForms.TabIndex = 3;
+            // 
+            // pnlStatus
+            // 
+            this.pnlStatus.Controls.Add(this.lblStatus);
+            this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlStatus.Location = new System.Drawing.Point(0, 520);
+            this.pnlStatus.Name = "pnlStatus";
+            this.pnlStatus.Size = new System.Drawing.Size(650, 40);
+            this.pnlStatus.TabIndex = 5;
             // 
             // lblStatus
             // 
@@ -162,6 +171,7 @@ namespace mvcComputersCompany
             // txbPassword
             // 
             this.txbPassword.BackColor = System.Drawing.Color.White;
+            this.txbPassword.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassword.Location = new System.Drawing.Point(25, 460);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
@@ -171,6 +181,7 @@ namespace mvcComputersCompany
             // txbUsuario
             // 
             this.txbUsuario.BackColor = System.Drawing.Color.White;
+            this.txbUsuario.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsuario.Location = new System.Drawing.Point(25, 407);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(100, 20);
@@ -189,6 +200,7 @@ namespace mvcComputersCompany
             // btnConsultarPortatiles
             // 
             this.btnConsultarPortatiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnConsultarPortatiles.Enabled = false;
             this.btnConsultarPortatiles.FlatAppearance.BorderSize = 0;
             this.btnConsultarPortatiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarPortatiles.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,6 +216,7 @@ namespace mvcComputersCompany
             // btnRegistrarPortatil
             // 
             this.btnRegistrarPortatil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnRegistrarPortatil.Enabled = false;
             this.btnRegistrarPortatil.FlatAppearance.BorderSize = 0;
             this.btnRegistrarPortatil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPortatil.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,6 +232,7 @@ namespace mvcComputersCompany
             // btnRegistrarEmpresa
             // 
             this.btnRegistrarEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnRegistrarEmpresa.Enabled = false;
             this.btnRegistrarEmpresa.FlatAppearance.BorderSize = 0;
             this.btnRegistrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,6 +257,17 @@ namespace mvcComputersCompany
             this.pnlBarraTitulo.Size = new System.Drawing.Size(800, 40);
             this.pnlBarraTitulo.TabIndex = 1;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(12, 7);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(243, 25);
+            this.lblTitle.TabIndex = 7;
+            this.lblTitle.Text = "Venta de computadoras";
             // 
             // btnMinimizar
             // 
@@ -270,26 +295,6 @@ namespace mvcComputersCompany
             this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
             this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblStatus);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 520);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 40);
-            this.panel1.TabIndex = 5;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(12, 7);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(243, 25);
-            this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "Venta de computadoras";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +311,8 @@ namespace mvcComputersCompany
             this.Text = "Ventana Principal";
             this.pnlContenedor.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
+            this.pnlStatus.ResumeLayout(false);
+            this.pnlStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).EndInit();
             this.pnlBarraMenu.ResumeLayout(false);
             this.pnlBarraMenu.PerformLayout();
@@ -314,8 +321,6 @@ namespace mvcComputersCompany
             this.pnlBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -339,7 +344,7 @@ namespace mvcComputersCompany
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlStatus;
         private System.Windows.Forms.Label lblTitle;
     }
 }

@@ -1,4 +1,4 @@
-﻿using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Client;
 using System;
 using System.Data;
 
@@ -17,10 +17,17 @@ namespace mvcComputersCompany.datos
         private static string atrConnectionDB; //= "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
         private static OracleConnection myConnection; //= new OracleConnection(@atrConnectionDB);
 
-        #endregion
-        #region Getters
-        public static string getStatus()
+        public static void conectar()
         {
+            atrConnectionDB = "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
+            myConnection = new OracleConnection(@atrConnectionDB);
+        }
+        public static string stringStatus()
+        {
+            if (myConnection.State == ConnectionState.Open)
+            {
+                myConnection.Close();
+            }
             try
             {
                 myConnection.Open();
@@ -29,6 +36,36 @@ namespace mvcComputersCompany.datos
             catch (Exception e)
             {
                 return "ERROR: " + e.Message;
+            }
+        }
+        public static bool boolStatus()
+        {
+            if (myConnection.State == ConnectionState.Open)
+            {
+                myConnection.Close();
+            }
+            try
+            {
+                myConnection.Open();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public void CheckClosedConnection()
+        {
+            if (myConnection.State == ConnectionState.Open)
+            {
+                myConnection.Close();
+            }
+        }
+        public void CheckOpenConnection()
+        {
+            if (myConnection.State == ConnectionState.Closed)
+            {
+                myConnection.Open();
             }
         }
         public OracleConnection getMyConnection()
@@ -42,6 +79,10 @@ namespace mvcComputersCompany.datos
         {
             atrUserDB = prmUser;
         }
+        public static string getUser()
+        {
+            return atrUserDB;
+        }
         public static void setPassword(string prmPassword)
         {
             atrPasswordDB = prmPassword;
@@ -51,25 +92,6 @@ namespace mvcComputersCompany.datos
             atrConnectionDB = "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
             myConnection = new OracleConnection(@atrConnectionDB);
         }
-
-
-
-        public void ComprobarDesconexion()
-        {
-            if (myConnection.State == ConnectionState.Open)
-            {
-                myConnection.Close();
-            }
-        }
-
-        public void ComprobarConnection()
-        {
-            if (myConnection.State == ConnectionState.Closed)
-            {
-                myConnection.Open();
-            }
-        }
-
         #endregion
     }
 }
