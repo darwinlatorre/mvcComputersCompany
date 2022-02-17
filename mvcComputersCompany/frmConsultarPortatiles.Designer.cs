@@ -40,7 +40,7 @@ namespace mvcComputersCompany
             this.txbMarcaPortatil = new System.Windows.Forms.TextBox();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.lblRespuestaConsulta = new System.Windows.Forms.Label();
+            this.lblConsultaPortatil = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@ namespace mvcComputersCompany
             // 
             this.lblDatosEmpresaPortatil.AutoSize = true;
             this.lblDatosEmpresaPortatil.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosEmpresaPortatil.Location = new System.Drawing.Point(125, 83);
+            this.lblDatosEmpresaPortatil.Location = new System.Drawing.Point(125, 68);
             this.lblDatosEmpresaPortatil.Name = "lblDatosEmpresaPortatil";
             this.lblDatosEmpresaPortatil.Size = new System.Drawing.Size(379, 21);
             this.lblDatosEmpresaPortatil.TabIndex = 4;
@@ -77,7 +77,7 @@ namespace mvcComputersCompany
             // 
             // txbNombreEmpresa
             // 
-            this.txbNombreEmpresa.Location = new System.Drawing.Point(316, 122);
+            this.txbNombreEmpresa.Location = new System.Drawing.Point(316, 107);
             this.txbNombreEmpresa.Name = "txbNombreEmpresa";
             this.txbNombreEmpresa.Size = new System.Drawing.Size(200, 20);
             this.txbNombreEmpresa.TabIndex = 9;
@@ -86,7 +86,7 @@ namespace mvcComputersCompany
             // 
             this.lblNombreEmpresa.AutoSize = true;
             this.lblNombreEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(126, 122);
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(126, 107);
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
             this.lblNombreEmpresa.Size = new System.Drawing.Size(168, 17);
             this.lblNombreEmpresa.TabIndex = 8;
@@ -96,7 +96,7 @@ namespace mvcComputersCompany
             // 
             this.lblMarcaPortatil.AutoSize = true;
             this.lblMarcaPortatil.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcaPortatil.Location = new System.Drawing.Point(126, 154);
+            this.lblMarcaPortatil.Location = new System.Drawing.Point(126, 139);
             this.lblMarcaPortatil.Name = "lblMarcaPortatil";
             this.lblMarcaPortatil.Size = new System.Drawing.Size(152, 17);
             this.lblMarcaPortatil.TabIndex = 16;
@@ -104,7 +104,7 @@ namespace mvcComputersCompany
             // 
             // txbMarcaPortatil
             // 
-            this.txbMarcaPortatil.Location = new System.Drawing.Point(316, 154);
+            this.txbMarcaPortatil.Location = new System.Drawing.Point(316, 139);
             this.txbMarcaPortatil.Name = "txbMarcaPortatil";
             this.txbMarcaPortatil.Size = new System.Drawing.Size(200, 20);
             this.txbMarcaPortatil.TabIndex = 17;
@@ -134,7 +134,7 @@ namespace mvcComputersCompany
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvConsulta.EnableHeadersVisualStyles = false;
             this.dgvConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.dgvConsulta.Location = new System.Drawing.Point(31, 261);
+            this.dgvConsulta.Location = new System.Drawing.Point(30, 210);
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.ReadOnly = true;
             this.dgvConsulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -147,13 +147,13 @@ namespace mvcComputersCompany
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvConsulta.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsulta.Size = new System.Drawing.Size(573, 230);
+            this.dgvConsulta.Size = new System.Drawing.Size(575, 230);
             this.dgvConsulta.TabIndex = 18;
             // 
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(264, 190);
+            this.btnConsultar.Location = new System.Drawing.Point(264, 175);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(100, 30);
             this.btnConsultar.TabIndex = 19;
@@ -161,23 +161,21 @@ namespace mvcComputersCompany
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // lblRespuestaConsulta
+            // lblConsultaPortatil
             // 
-            this.lblRespuestaConsulta.AutoSize = true;
-            this.lblRespuestaConsulta.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespuestaConsulta.Location = new System.Drawing.Point(100, 224);
-            this.lblRespuestaConsulta.Name = "lblRespuestaConsulta";
-            this.lblRespuestaConsulta.Size = new System.Drawing.Size(0, 21);
-            this.lblRespuestaConsulta.TabIndex = 20;
-            this.lblRespuestaConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblRespuestaConsulta.Visible = false;
+            this.lblConsultaPortatil.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultaPortatil.Location = new System.Drawing.Point(12, 442);
+            this.lblConsultaPortatil.Name = "lblConsultaPortatil";
+            this.lblConsultaPortatil.Size = new System.Drawing.Size(610, 70);
+            this.lblConsultaPortatil.TabIndex = 21;
+            this.lblConsultaPortatil.Visible = false;
             // 
             // frmConsultarPortatiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 521);
-            this.Controls.Add(this.lblRespuestaConsulta);
+            this.Controls.Add(this.lblConsultaPortatil);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.txbMarcaPortatil);
@@ -205,6 +203,6 @@ namespace mvcComputersCompany
         private System.Windows.Forms.TextBox txbMarcaPortatil;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Label lblRespuestaConsulta;
+        private System.Windows.Forms.Label lblConsultaPortatil;
     }
 }

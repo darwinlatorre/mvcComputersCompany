@@ -31,8 +31,8 @@ namespace mvcComputersCompany
             }
             catch (Exception a)
             {
-                lblRespuestaConsulta.Text = "Error: " + a.Message;
-                lblRespuestaConsulta.Visible = true;
+                lblConsultaPortatil.Text = "Error: " + a.Message;
+                lblConsultaPortatil.Visible = true;
             }
         }
     }

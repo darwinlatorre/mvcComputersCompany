@@ -41,7 +41,7 @@ namespace mvcComputersCompany
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.txbUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconImage = new System.Windows.Forms.PictureBox();
             this.btnConsultarPortatiles = new System.Windows.Forms.Button();
             this.btnRegistrarPortatil = new System.Windows.Forms.Button();
             this.btnRegistrarEmpresa = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@ namespace mvcComputersCompany
             this.pnlStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).BeginInit();
             this.pnlBarraMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconImage)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -121,7 +121,7 @@ namespace mvcComputersCompany
             this.pnlBarraMenu.Controls.Add(this.lblUsuario);
             this.pnlBarraMenu.Controls.Add(this.txbPassword);
             this.pnlBarraMenu.Controls.Add(this.txbUsuario);
-            this.pnlBarraMenu.Controls.Add(this.pictureBox1);
+            this.pnlBarraMenu.Controls.Add(this.iconImage);
             this.pnlBarraMenu.Controls.Add(this.btnConsultarPortatiles);
             this.pnlBarraMenu.Controls.Add(this.btnRegistrarPortatil);
             this.pnlBarraMenu.Controls.Add(this.btnRegistrarEmpresa);
@@ -187,15 +187,15 @@ namespace mvcComputersCompany
             this.txbUsuario.Size = new System.Drawing.Size(100, 20);
             this.txbUsuario.TabIndex = 4;
             // 
-            // pictureBox1
+            // iconImage
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.iconImage.Image = ((System.Drawing.Image)(resources.GetObject("iconImage.Image")));
+            this.iconImage.Location = new System.Drawing.Point(25, 6);
+            this.iconImage.Name = "iconImage";
+            this.iconImage.Size = new System.Drawing.Size(100, 125);
+            this.iconImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconImage.TabIndex = 3;
+            this.iconImage.TabStop = false;
             // 
             // btnConsultarPortatiles
             // 
@@ -303,6 +303,7 @@ namespace mvcComputersCompany
             this.ControlBox = false;
             this.Controls.Add(this.pnlContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -316,7 +317,7 @@ namespace mvcComputersCompany
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).EndInit();
             this.pnlBarraMenu.ResumeLayout(false);
             this.pnlBarraMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconImage)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
             this.pnlBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -336,7 +337,7 @@ namespace mvcComputersCompany
         private System.Windows.Forms.Button btnConsultarPortatiles;
         private System.Windows.Forms.Button btnRegistrarPortatil;
         private System.Windows.Forms.Button btnRegistrarEmpresa;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox iconImage;
         private System.Windows.Forms.PictureBox backGroundImage;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txbUsuario;
