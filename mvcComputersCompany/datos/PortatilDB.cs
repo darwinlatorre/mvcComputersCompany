@@ -13,7 +13,7 @@ namespace mvcComputersCompany.datos
             try
             {
                 atrConexionDB.CheckOpenConnection();
-                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConexionDB.getMyConnection());
+                OracleCommand myCommand = new OracleCommand(ConnectionDB.getUser() + ".prcRegistrarPortatil", atrConexionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
 
                 myCommand.Parameters.Add("P_NRO_SERIAL", OracleDbType.Varchar2, prmNroSerial, ParameterDirection.Input);
@@ -27,9 +27,9 @@ namespace mvcComputersCompany.datos
                 myCommand.ExecuteNonQuery();
                 return "Se ha registrado el portatil";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return "No se ha registrado el portatil";
+                return "ERROR: " + e.Message;
             }
             finally
             {

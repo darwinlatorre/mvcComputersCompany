@@ -39,7 +39,7 @@ namespace mvcComputersCompany
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.dtpFechaCreacion = new System.Windows.Forms.DateTimePicker();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.lblRegistrar = new System.Windows.Forms.Label();
+            this.lblRegistroEmpresa = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblRegistrarEmpresa
@@ -139,14 +139,14 @@ namespace mvcComputersCompany
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // lblRegistrar
+            // lblRegistroEmpresa
             // 
-            this.lblRegistrar.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrar.Location = new System.Drawing.Point(12, 442);
-            this.lblRegistrar.Name = "lblRegistrar";
-            this.lblRegistrar.Size = new System.Drawing.Size(610, 70);
-            this.lblRegistrar.TabIndex = 10;
-            this.lblRegistrar.Visible = false;
+            this.lblRegistroEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistroEmpresa.Location = new System.Drawing.Point(12, 442);
+            this.lblRegistroEmpresa.Name = "lblRegistroEmpresa";
+            this.lblRegistroEmpresa.Size = new System.Drawing.Size(610, 70);
+            this.lblRegistroEmpresa.TabIndex = 10;
+            this.lblRegistroEmpresa.Visible = false;
             // 
             // frmRegistrarEmpresa
             // 
@@ -154,7 +154,7 @@ namespace mvcComputersCompany
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(634, 521);
-            this.Controls.Add(this.lblRegistrar);
+            this.Controls.Add(this.lblRegistroEmpresa);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dtpFechaCreacion);
             this.Controls.Add(this.txbNombre);
@@ -184,6 +184,6 @@ namespace mvcComputersCompany
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.DateTimePicker dtpFechaCreacion;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Label lblRegistrar;
+        private System.Windows.Forms.Label lblRegistroEmpresa;
     }
 }

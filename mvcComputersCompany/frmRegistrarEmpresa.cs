@@ -25,13 +25,13 @@ namespace mvcComputersCompany
         {
             try
             {
-                lblRegistrar.Text = Empresa.RegistrarEmpresa(int.Parse(txbNit.Text), txbNombre.Text, dtpFechaCreacion.Value);
-                lblRegistrar.Visible = true;
+                lblRegistroEmpresa.Text = Empresa.RegistrarEmpresa(int.Parse(txbNit.Text), txbNombre.Text, dtpFechaCreacion.Value);
+                lblRegistroEmpresa.Visible = true;
             }
             catch (Exception a)
             {
-                lblRegistrar.Text = "ERROR: " + a.Message;
-                lblRegistrar.Visible = true;
+                lblRegistroEmpresa.Text = "ERROR: " + a.Message;
+                lblRegistroEmpresa.Visible = true;
             }
         }
     }
