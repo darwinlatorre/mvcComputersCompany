@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using mvcComputersCompany.datos;
 
 namespace mvcComputersCompany
 {
@@ -110,5 +111,10 @@ namespace mvcComputersCompany
                 btnConsultarPortatiles.BackColor = Color.FromArgb(45, 62, 64);
         }
         #endregion
+
+        private void lblStatus_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = ConnectionDB.getStatus();
+        }
     }
 }
