@@ -1,3 +1,5 @@
+--STORED PRECEDURE FOR POINT 1 ----------------------------------------------------------------------------------------------------
+
 CREATE OR REPLACE PROCEDURE prcRegistrarEmpresa (P_NIT IN EMPRESA.EM_NIT%TYPE, 
 P_NOMBRE IN EMPRESA.EM_NOMBRE%TYPE, P_FECHA_CREACION IN EMPRESA.EM_FECHA_CREACION%TYPE)
 IS
@@ -6,6 +8,9 @@ BEGIN
     INTO EMPRESA 
     VALUES(P_NIT, P_NOMBRE, P_FECHA_CREACION);
 END prcRegistrarEmpresa;
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--STORED PRECEDURE FOR POINT 2 ----------------------------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE prcRegistrarPortatil (P_NRO_SERIAL IN COMPUTADOR.COM_NRO_SERIAL%TYPE, 
     P_NIT IN EMPRESA.EM_NIT%TYPE, P_MARCA IN COMPUTADOR.COM_MARCA%TYPE, 
@@ -20,12 +25,11 @@ BEGIN
     VALUES(P_NRO_SERIAL, P_NIT, P_MARCA, P_CAP_DISCO_DURO_GB, P_TIPO_DISCO_DURO, P_CAP_MEMORIA_RAM_GB, P_FECHA_ENSAMBLE);
 END prcRegistrarPortatil;
 
-
-
 -----------------------------------------------------------------------------------------------------------------------------------
---TESTING PROCEDURE, IT NOT FINISHED
+--STORED PRECEDURE FOR POINT 3 ----------------------------------------------------------------------------------------------------
 
--- FIRST PROCEDURE VARIANT
+-- FIRST PROCEDURE VARIANT --------------------------------------------------------------------------------------------------------
+
 CREATE OR REPLACE PROCEDURE prcConsPortatilesMarca(P_NOMBRE IN EMPRESA.EM_NOMBRE%TYPE, P_MARCA IN COMPUTADOR.COM_MARCA%TYPE, P_CURSOR_DATOS IN OUT SYS_REFCURSOR)
 AS
 BEGIN
@@ -39,7 +43,8 @@ END prcConsPortatilesMarca;
 
 SET SERVEROUTPUT ON
 
--- TEST prcConsPortatilesMarca 
+-- TEST prcConsPortatilesMarca ----------------------------------------------------------------------------------------------------
+
 DECLARE
     V_CURSOR SYS_REFCURSOR;
     v_serial COMPUTADOR.COM_NRO_SERIAL%TYPE;
@@ -55,7 +60,8 @@ BEGIN
         END LOOP;
 END;
 
--- SECOND PROCEDURE VARIANT
+-- SECOND PROCEDURE VARIANT ------------------------------------------------------------------------------------------------------
+
 CREATE OR REPLACE PACKAGE pkgPortatilesMarca AS
     TYPE V_CURSOR_TYPE IS REF CURSOR;
     PROCEDURE ConsPortatilesMarca(P_NOMBRE IN EMPRESA.EM_NOMBRE%TYPE, P_MARCA IN COMPUTADOR.COM_MARCA%TYPE, P_CURSOR_DATOS IN OUT SYS_REFCURSOR);
