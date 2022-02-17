@@ -11,17 +11,36 @@ namespace mvcComputersCompany
             InitializeComponent();
         }
 
-
         #region Salir
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        {
+            btnSalir.Size = new System.Drawing.Size(25, 25);
+            btnSalir.Location = new System.Drawing.Point(768, 7);
+        }
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.Size = new System.Drawing.Size(20, 20);
+            btnSalir.Location = new System.Drawing.Point(768, 12);
         }
         #endregion
         #region Minimizar
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        private void btnMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            btnMinimizar.Location = new System.Drawing.Point(742, 7);
+        }
+        private void btnMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimizar.Size = new System.Drawing.Size(20, 20);
+            btnMinimizar.Location = new System.Drawing.Point(742, 12);
         }
         #endregion
         #region Arrastar ventana
@@ -37,29 +56,5 @@ namespace mvcComputersCompany
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
-
-        private void btnSalir_MouseEnter(object sender, EventArgs e)
-        {
-            btnSalir.Size = new System.Drawing.Size(25, 25);
-            btnSalir.Location = new System.Drawing.Point(768, 7);
-        }
-
-        private void btnSalir_MouseLeave(object sender, EventArgs e)
-        {
-            btnSalir.Size = new System.Drawing.Size(20, 20);
-            btnSalir.Location = new System.Drawing.Point(768, 12);
-        }
-
-        private void btnMinimizar_MouseEnter(object sender, EventArgs e)
-        {
-            btnMinimizar.Size = new System.Drawing.Size(25, 25);
-            btnMinimizar.Location = new System.Drawing.Point(742, 7);
-        }
-
-        private void btnMinimizar_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimizar.Size = new System.Drawing.Size(20, 20);
-            btnMinimizar.Location = new System.Drawing.Point(742, 12);
-        }
     }
 }
