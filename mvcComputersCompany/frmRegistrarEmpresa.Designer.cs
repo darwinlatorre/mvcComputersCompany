@@ -66,7 +66,7 @@ namespace mvcComputersCompany
             // 
             this.lblDatosEmpresa.AutoSize = true;
             this.lblDatosEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosEmpresa.Location = new System.Drawing.Point(185, 110);
+            this.lblDatosEmpresa.Location = new System.Drawing.Point(185, 80);
             this.lblDatosEmpresa.Name = "lblDatosEmpresa";
             this.lblDatosEmpresa.Size = new System.Drawing.Size(280, 21);
             this.lblDatosEmpresa.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace mvcComputersCompany
             // 
             this.lblNit.AutoSize = true;
             this.lblNit.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNit.Location = new System.Drawing.Point(120, 200);
+            this.lblNit.Location = new System.Drawing.Point(100, 180);
             this.lblNit.Name = "lblNit";
             this.lblNit.Size = new System.Drawing.Size(32, 17);
             this.lblNit.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace mvcComputersCompany
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(120, 270);
+            this.lblNombre.Location = new System.Drawing.Point(100, 250);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(56, 17);
             this.lblNombre.TabIndex = 4;
@@ -96,7 +96,7 @@ namespace mvcComputersCompany
             // 
             this.lblFechaCreacion.AutoSize = true;
             this.lblFechaCreacion.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaCreacion.Location = new System.Drawing.Point(120, 340);
+            this.lblFechaCreacion.Location = new System.Drawing.Point(100, 320);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.Size = new System.Drawing.Size(144, 17);
             this.lblFechaCreacion.TabIndex = 5;
@@ -104,21 +104,25 @@ namespace mvcComputersCompany
             // 
             // txbNit
             // 
-            this.txbNit.Location = new System.Drawing.Point(310, 200);
+            this.txbNit.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNit.Location = new System.Drawing.Point(350, 180);
             this.txbNit.Name = "txbNit";
             this.txbNit.Size = new System.Drawing.Size(200, 20);
             this.txbNit.TabIndex = 6;
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(310, 270);
+            this.txbNombre.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNombre.Location = new System.Drawing.Point(350, 250);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(200, 20);
             this.txbNombre.TabIndex = 7;
             // 
             // dtpFechaCreacion
             // 
-            this.dtpFechaCreacion.Location = new System.Drawing.Point(310, 337);
+            this.dtpFechaCreacion.CalendarFont = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaCreacion.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaCreacion.Location = new System.Drawing.Point(350, 320);
             this.dtpFechaCreacion.Name = "dtpFechaCreacion";
             this.dtpFechaCreacion.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaCreacion.TabIndex = 8;
@@ -126,7 +130,7 @@ namespace mvcComputersCompany
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(275, 420);
+            this.btnRegistrar.Location = new System.Drawing.Point(275, 430);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(100, 30);
             this.btnRegistrar.TabIndex = 9;

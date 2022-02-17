@@ -162,6 +162,7 @@ namespace mvcComputersCompany
             // txbPassword
             // 
             this.txbPassword.BackColor = System.Drawing.Color.White;
+            this.txbPassword.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassword.Location = new System.Drawing.Point(25, 460);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
@@ -171,6 +172,7 @@ namespace mvcComputersCompany
             // txbUsuario
             // 
             this.txbUsuario.BackColor = System.Drawing.Color.White;
+            this.txbUsuario.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsuario.Location = new System.Drawing.Point(25, 407);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(100, 20);
