@@ -48,6 +48,7 @@ namespace mvcComputersCompany
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).BeginInit();
@@ -233,6 +234,7 @@ namespace mvcComputersCompany
             // pnlBarraTitulo
             // 
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.pnlBarraTitulo.Controls.Add(this.lblTitle);
             this.pnlBarraTitulo.Controls.Add(this.btnMinimizar);
             this.pnlBarraTitulo.Controls.Add(this.btnSalir);
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -277,6 +279,17 @@ namespace mvcComputersCompany
             this.panel1.Size = new System.Drawing.Size(650, 40);
             this.panel1.TabIndex = 5;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(12, 7);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(243, 25);
+            this.lblTitle.TabIndex = 7;
+            this.lblTitle.Text = "Venta de computadoras";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +311,7 @@ namespace mvcComputersCompany
             this.pnlBarraMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
+            this.pnlBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -326,6 +340,7 @@ namespace mvcComputersCompany
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 
