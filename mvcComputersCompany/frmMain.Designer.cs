@@ -32,23 +32,24 @@ namespace mvcComputersCompany
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlForms = new System.Windows.Forms.Panel();
+            this.backGroundImage = new System.Windows.Forms.PictureBox();
             this.pnlBarraMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsultarPortatiles = new System.Windows.Forms.Button();
             this.btnRegistrarPortatil = new System.Windows.Forms.Button();
             this.btnRegistrarEmpresa = new System.Windows.Forms.Button();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backGroundImage = new System.Windows.Forms.PictureBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             this.pnlForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).BeginInit();
             this.pnlBarraMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -73,6 +74,16 @@ namespace mvcComputersCompany
             this.pnlForms.Size = new System.Drawing.Size(650, 560);
             this.pnlForms.TabIndex = 3;
             // 
+            // backGroundImage
+            // 
+            this.backGroundImage.Image = ((System.Drawing.Image)(resources.GetObject("backGroundImage.Image")));
+            this.backGroundImage.Location = new System.Drawing.Point(215, 170);
+            this.backGroundImage.Name = "backGroundImage";
+            this.backGroundImage.Size = new System.Drawing.Size(220, 220);
+            this.backGroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backGroundImage.TabIndex = 4;
+            this.backGroundImage.TabStop = false;
+            // 
             // pnlBarraMenu
             // 
             this.pnlBarraMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
@@ -85,6 +96,16 @@ namespace mvcComputersCompany
             this.pnlBarraMenu.Name = "pnlBarraMenu";
             this.pnlBarraMenu.Size = new System.Drawing.Size(150, 560);
             this.pnlBarraMenu.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // btnConsultarPortatiles
             // 
@@ -134,6 +155,7 @@ namespace mvcComputersCompany
             // pnlBarraTitulo
             // 
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.pnlBarraTitulo.Controls.Add(this.lblStatus);
             this.pnlBarraTitulo.Controls.Add(this.btnMinimizar);
             this.pnlBarraTitulo.Controls.Add(this.btnSalir);
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -169,25 +191,17 @@ namespace mvcComputersCompany
             this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
             this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
-            // pictureBox1
+            // lblStatus
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // backGroundImage
-            // 
-            this.backGroundImage.Image = ((System.Drawing.Image)(resources.GetObject("backGroundImage.Image")));
-            this.backGroundImage.Location = new System.Drawing.Point(215, 170);
-            this.backGroundImage.Name = "backGroundImage";
-            this.backGroundImage.Size = new System.Drawing.Size(220, 220);
-            this.backGroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backGroundImage.TabIndex = 4;
-            this.backGroundImage.TabStop = false;
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(12, 9);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(104, 17);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "No conectado";
+            this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
             // 
             // frmMain
             // 
@@ -205,12 +219,13 @@ namespace mvcComputersCompany
             this.Text = "Ventana Principal";
             this.pnlContenedor.ResumeLayout(false);
             this.pnlForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).EndInit();
             this.pnlBarraMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
+            this.pnlBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,6 +243,7 @@ namespace mvcComputersCompany
         private System.Windows.Forms.Button btnRegistrarEmpresa;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox backGroundImage;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 
