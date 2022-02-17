@@ -24,18 +24,14 @@ namespace mvcComputersCompany
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             Portatil varPortatil = new Portatil();
-            DataSet varConsulta = new DataSet();
-            string varNombreEmpresa = txbNombreEmpresa.Text;
-            string varMarcaPortatil = txbMarcaPortatil.Text;
             try
             {
-                varConsulta = varPortatil.ConsultarPotatilxMarca(varNombreEmpresa, varMarcaPortatil);
-                dgvConsulta.DataSource = varConsulta;
+                dgvConsulta.DataSource = varPortatil.ConsultarPotatilxMarca(txbNombreEmpresa.Text, txbMarcaPortatil.Text);
                 dgvConsulta.DataMember = "PortatilesPorMarca";
             }
-            catch (Exception)
+            catch (Exception a)
             {
-                lblRespuestaConsulta.Text = "La consulta no fue realizada, intenta de nuevo!";
+                lblRespuestaConsulta.Text = "Error: " + a.Message;
                 lblRespuestaConsulta.Visible = true;
             }
         }
