@@ -9,12 +9,17 @@ namespace mvcComputersCompany.datos
         //private static string atrUserDB = "ComputersCompany";
         //private static string atrPasswordDB = "bddarwin";
 
-        private static string atrUserDB = "BD2";
-        private static string atrPasswordDB = "AnteDatabase";
+        private static string atrUserDB; //= "BD2";
+        private static string atrPasswordDB; //= "AnteDatabase";
 
-        private static string atrConnectionDB = "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
-        private static OracleConnection myConnection = new OracleConnection(@atrConnectionDB);
+        private static string atrConnectionDB; //= "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
+        private static OracleConnection myConnection; //= new OracleConnection(@atrConnectionDB);
 
+        public static void conectar()
+        {
+            atrConnectionDB = "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
+            myConnection = new OracleConnection(@atrConnectionDB);
+        }
         public static string getStatus()
         {
             try
@@ -28,11 +33,12 @@ namespace mvcComputersCompany.datos
             }
         }
 
-        public OracleConnection getMyConnection() 
-        {
-            myConnection.Open();
-            return myConnection;
-        }
+
+        //public OracleConnection getMyConnection() 
+        //{
+        //    myConnection.Open();
+        //    return myConnection;
+        //}
 
         public void ComprobarConnection()
         {
@@ -40,6 +46,18 @@ namespace mvcComputersCompany.datos
             {
                 myConnection.Close();
             }
+        }
+        public OracleConnection getMyConnection()
+        {
+            return myConnection;
+        }
+        public static void setUser(string prmUser)
+        {
+            atrUserDB = prmUser;
+        }
+        public static void setPassword(string prmPassword)
+        {
+            atrPasswordDB = prmPassword;
         }
     }
 }
