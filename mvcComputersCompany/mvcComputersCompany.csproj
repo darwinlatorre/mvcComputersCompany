@@ -34,12 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Oracle.DataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
-      <HintPath>..\packages\Aleph1.Oracle.DataAccess.AllFrameworks.x64.122.19.1.20201224\lib\net40\Oracle.DataAccess.dll</HintPath>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\..\..\..\..\Bases de datos 1\Teoria\Proyecto Final\mvcEmpresasComputadoras\mvcEmpresasComputadoras\bin\Debug\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
