@@ -38,11 +38,6 @@ namespace mvcComputersCompany
                 lblRespuestaConsulta.Text = "La consulta no fue realizada, intenta de nuevo!";
                 lblRespuestaConsulta.Visible = true;
             }
-
-            
-
-            //txbNombreEmpresa
-            //txbMarcaPortatil
         }
     }
 }
