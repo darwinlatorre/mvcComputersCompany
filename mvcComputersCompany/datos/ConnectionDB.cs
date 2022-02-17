@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Oracle.DataAccess.Client;
+﻿using Oracle.DataAccess.Client;
 using System.Data;
 
 namespace mvcComputersCompany.datos
@@ -18,6 +13,7 @@ namespace mvcComputersCompany.datos
 
         public OracleConnection getMyConnection() 
         {
+            myConnection.Open();
             return myConnection;
         }
 

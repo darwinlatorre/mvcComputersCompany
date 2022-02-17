@@ -40,7 +40,7 @@ namespace mvcComputersCompany.datos
             }
         }
 
-        public DataSet ConsultaPortatilesMarca(string prmNombre, string prmMarca) {
+        public DataSet ConsultaPortatilesMarca(string prmNombreEmpresa, string prmMarcaPortatil) {
 
             try
             {
@@ -48,17 +48,14 @@ namespace mvcComputersCompany.datos
                 myCommand.CommandType = CommandType.StoredProcedure;
                 DataSet varDataSet = new DataSet();
                 // Testing new parameters
-                myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2).Value = prmNombre;
-                myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2).Value = prmMarca;
+                myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2).Value = prmNombreEmpresa;
+                myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2).Value = prmMarcaPortatil;
                 myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
                 
-                OracleDataReader varReader = myCommand.ExecuteReader();
                 
                 OracleDataAdapter varAdapter = new OracleDataAdapter(myCommand);
-                varAdapter.TableMappings.Add("Table", "Portatiles Por Marca");
-                varAdapter.Fill(varDataSet);
+                varAdapter.Fill(varDataSet, "Portatiles Por Marca");
                 
-                varReader.Close();
                 return varDataSet;
             }
             catch (Exception)
