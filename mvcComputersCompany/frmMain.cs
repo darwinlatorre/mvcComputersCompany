@@ -115,7 +115,7 @@ namespace mvcComputersCompany
         {
             ConnectionDB.setUser(txbUsuario.Text);
             ConnectionDB.setPassword(txbPassword.Text);
-            ConnectionDB.conectar();
+            ConnectionDB.Conectar();
             lblStatus.Text = ConnectionDB.getStatus();
         }
     }

@@ -46,18 +46,30 @@ namespace mvcComputersCompany.datos
         {
             atrPasswordDB = prmPassword;
         }
-        public static void conectar()
+        public static void Conectar()
         {
             atrConnectionDB = "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
             myConnection = new OracleConnection(@atrConnectionDB);
         }
-        public void ComprobarConnection()
+
+
+
+        public void ComprobarDesconexion()
         {
             if (myConnection.State == ConnectionState.Open)
             {
                 myConnection.Close();
             }
         }
+
+        public void ComprobarConnection()
+        {
+            if (myConnection.State == ConnectionState.Closed)
+            {
+                myConnection.Open();
+            }
+        }
+
         #endregion
     }
 }

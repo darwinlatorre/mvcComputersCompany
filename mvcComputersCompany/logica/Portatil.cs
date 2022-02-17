@@ -14,7 +14,9 @@ namespace mvcComputersCompany.logica
 
         public DataSet ConsultarPotatilxMarca(string prmNombreEmpresa, string prmMarcaPortatil) 
         {
-            return atrPortatil.ConsultaPortatilesMarca(prmNombreEmpresa, prmMarcaPortatil);
+            DataSet varConjuntoDatosConsulta = new DataSet();
+            varConjuntoDatosConsulta = atrPortatil.ConsultaPortatilesMarca(prmNombreEmpresa, prmMarcaPortatil);
+            return varConjuntoDatosConsulta;
         }
     }
 }

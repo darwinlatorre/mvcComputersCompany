@@ -12,7 +12,7 @@ namespace mvcComputersCompany.datos
         {
             try
             {
-                atrConnecionDB.getMyConnection().Open();
+                atrConnecionDB.ComprobarConnection();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
 
@@ -33,7 +33,7 @@ namespace mvcComputersCompany.datos
             }
             finally
             {
-                atrConnecionDB.ComprobarConnection();
+                atrConnecionDB.ComprobarDesconexion();
             }
         }
 
@@ -41,18 +41,17 @@ namespace mvcComputersCompany.datos
 
             try
             {
-                atrConnecionDB.getMyConnection().Open();
+                atrConnecionDB.ComprobarConnection();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConnecionDB.getMyConnection());
-                myCommand.CommandType = CommandType.StoredProcedure;
-                DataSet varDataSet = new DataSet();
 
-                myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2).Value = prmNombreEmpresa;
-                myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2).Value = prmMarcaPortatil;
-                myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2, prmNombreEmpresa, ParameterDirection.Input);
+                myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2, prmMarcaPortatil, ParameterDirection.Input);
+                myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor, ParameterDirection.Output);
+                myCommand.CommandType = CommandType.StoredProcedure;
                 
                 OracleDataAdapter varAdapter = new OracleDataAdapter(myCommand);
-                varAdapter.Fill(varDataSet, "Portatiles Por Marca");
-                
+                DataSet varDataSet = new DataSet();
+                varAdapter.Fill(varDataSet, "PortatilesPorMarca");
                 return varDataSet;
             }
             catch (Exception)
@@ -61,7 +60,7 @@ namespace mvcComputersCompany.datos
             }
             finally
             {
-                atrConnecionDB.ComprobarConnection();
+                atrConnecionDB.ComprobarDesconexion();
             }
         }
 
