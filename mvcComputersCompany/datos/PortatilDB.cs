@@ -42,7 +42,7 @@ namespace mvcComputersCompany.datos
             try
             {
                 atrConexionDB.CheckOpenConnection();
-                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConexionDB.getMyConnection());
+                OracleCommand myCommand = new OracleCommand(ConnectionDB.getUser() + ".prcConsPortatilesMarca", atrConexionDB.getMyConnection());
 
                 myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2, prmNombreEmpresa, ParameterDirection.Input);
                 myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2, prmMarcaPortatil, ParameterDirection.Input);
