@@ -25,15 +25,13 @@ namespace mvcComputersCompany
         {
             try
             {
-                Portatil.RegistrarPortatil(txbSerial.Text, int.Parse(txbNit.Text), cbMarca.Text, int.Parse(txbCapacidadDisco.Text), cbTipoDisco.Text, int.Parse(txbCapacidadRam.Text), dtpFechaEnsamblaje.Value);
-                btnRegistrar.Visible = false;
-                lblRegistrar.Text = "Registro satisfactorio";
-                lblRegistrar.Visible = true;
+                lblRegistroPortatil.Text = Portatil.RegistrarPortatil(txbSerial.Text, int.Parse(txbNit.Text), cbMarca.Text, int.Parse(txbCapacidadDisco.Text), cbTipoDisco.Text, int.Parse(txbCapacidadRam.Text), dtpFechaEnsamblaje.Value);
+                lblRegistroPortatil.Visible = true;
             }
             catch (Exception a)
             {
-                lblRegistrar.Text = "ERROR: " + a.Message;
-                lblRegistrar.Visible = true;
+                lblRegistroPortatil.Text = "ERROR: " + a.Message;
+                lblRegistroPortatil.Visible = true;
             }
         }
     }
