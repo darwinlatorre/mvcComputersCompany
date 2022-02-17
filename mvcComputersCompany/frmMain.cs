@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -35,12 +37,12 @@ namespace mvcComputersCompany
         private void btnMinimizar_MouseEnter(object sender, EventArgs e)
         {
             btnMinimizar.Size = new System.Drawing.Size(25, 25);
-            btnMinimizar.Location = new System.Drawing.Point(742, 7);
+            btnMinimizar.Location = new System.Drawing.Point(740, 7);
         }
         private void btnMinimizar_MouseLeave(object sender, EventArgs e)
         {
             btnMinimizar.Size = new System.Drawing.Size(20, 20);
-            btnMinimizar.Location = new System.Drawing.Point(742, 12);
+            btnMinimizar.Location = new System.Drawing.Point(740, 12);
         }
         #endregion
         #region Arrastar ventana
@@ -56,5 +58,41 @@ namespace mvcComputersCompany
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = pnlForms.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                formulario.BackColor = Color.FromArgb(228, 242, 231);
+                pnlForms.Controls.Add(formulario);
+                pnlForms.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+        private void btnRegistrarEmpresa_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmRegistrarEmpresa>();
+        }
+
+        private void btnRegistrarPortatil_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmRegistrarPortatil>();
+        }
+
+        private void btnConsultarPortatiles_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmConsultarPortatiles>();
+        }
     }
 }

@@ -54,23 +54,50 @@
     <Compile Include="datos\ConnectionDB.cs" />
     <Compile Include="datos\EmpresaDB.cs" />
     <Compile Include="datos\PortatilDB.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="frmRegistrarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="frmRegistrarEmpresa.Designer.cs">
+      <DependentUpon>frmRegistrarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarPortatil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarPortatil.Designer.cs">
+      <DependentUpon>frmRegistrarPortatil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarPortatiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarPortatiles.Designer.cs">
+      <DependentUpon>frmConsultarPortatiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="logica\Empresa.cs" />
     <Compile Include="logica\Portatil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultarPortatiles.resx">
+      <DependentUpon>frmConsultarPortatiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarEmpresa.resx">
+      <DependentUpon>frmRegistrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarPortatil.resx">
+      <DependentUpon>frmRegistrarPortatil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
