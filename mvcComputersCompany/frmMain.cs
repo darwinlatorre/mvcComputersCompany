@@ -111,9 +111,11 @@ namespace mvcComputersCompany
                 btnConsultarPortatiles.BackColor = Color.FromArgb(45, 62, 64);
         }
         #endregion
-
-        private void lblStatus_Click(object sender, EventArgs e)
+        private void btnConectar_Click(object sender, EventArgs e)
         {
+            ConnectionDB.setUser(txbUsuario.Text);
+            ConnectionDB.setPassword(txbPassword.Text);
+            ConnectionDB.conectar();
             lblStatus.Text = ConnectionDB.getStatus();
         }
     }

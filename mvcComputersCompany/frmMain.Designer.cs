@@ -32,8 +32,14 @@ namespace mvcComputersCompany
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlForms = new System.Windows.Forms.Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.backGroundImage = new System.Windows.Forms.PictureBox();
             this.pnlBarraMenu = new System.Windows.Forms.Panel();
+            this.btnConectar = new System.Windows.Forms.Button();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txbPassword = new System.Windows.Forms.TextBox();
+            this.txbUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsultarPortatiles = new System.Windows.Forms.Button();
             this.btnRegistrarPortatil = new System.Windows.Forms.Button();
@@ -41,7 +47,7 @@ namespace mvcComputersCompany
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.lblStatus = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContenedor.SuspendLayout();
             this.pnlForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).BeginInit();
@@ -50,6 +56,7 @@ namespace mvcComputersCompany
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -67,12 +74,24 @@ namespace mvcComputersCompany
             // pnlForms
             // 
             this.pnlForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
+            this.pnlForms.Controls.Add(this.panel1);
             this.pnlForms.Controls.Add(this.backGroundImage);
             this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForms.Location = new System.Drawing.Point(150, 40);
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Size = new System.Drawing.Size(650, 560);
             this.pnlForms.TabIndex = 3;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
+            this.lblStatus.Location = new System.Drawing.Point(6, 11);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(104, 17);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "No conectado";
             // 
             // backGroundImage
             // 
@@ -87,6 +106,11 @@ namespace mvcComputersCompany
             // pnlBarraMenu
             // 
             this.pnlBarraMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.pnlBarraMenu.Controls.Add(this.btnConectar);
+            this.pnlBarraMenu.Controls.Add(this.lblPassword);
+            this.pnlBarraMenu.Controls.Add(this.lblUsuario);
+            this.pnlBarraMenu.Controls.Add(this.txbPassword);
+            this.pnlBarraMenu.Controls.Add(this.txbUsuario);
             this.pnlBarraMenu.Controls.Add(this.pictureBox1);
             this.pnlBarraMenu.Controls.Add(this.btnConsultarPortatiles);
             this.pnlBarraMenu.Controls.Add(this.btnRegistrarPortatil);
@@ -96,6 +120,60 @@ namespace mvcComputersCompany
             this.pnlBarraMenu.Name = "pnlBarraMenu";
             this.pnlBarraMenu.Size = new System.Drawing.Size(150, 560);
             this.pnlBarraMenu.TabIndex = 2;
+            // 
+            // btnConectar
+            // 
+            this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnConectar.FlatAppearance.BorderSize = 0;
+            this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConectar.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConectar.ForeColor = System.Drawing.Color.White;
+            this.btnConectar.Location = new System.Drawing.Point(0, 503);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(150, 45);
+            this.btnConectar.TabIndex = 8;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.UseVisualStyleBackColor = false;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(31, 440);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(88, 17);
+            this.lblPassword.TabIndex = 7;
+            this.lblPassword.Text = "Contraseña";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(43, 387);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(64, 17);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // txbPassword
+            // 
+            this.txbPassword.BackColor = System.Drawing.Color.White;
+            this.txbPassword.Location = new System.Drawing.Point(25, 460);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
+            this.txbPassword.Size = new System.Drawing.Size(100, 20);
+            this.txbPassword.TabIndex = 5;
+            // 
+            // txbUsuario
+            // 
+            this.txbUsuario.BackColor = System.Drawing.Color.White;
+            this.txbUsuario.Location = new System.Drawing.Point(25, 407);
+            this.txbUsuario.Name = "txbUsuario";
+            this.txbUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txbUsuario.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -114,7 +192,7 @@ namespace mvcComputersCompany
             this.btnConsultarPortatiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarPortatiles.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarPortatiles.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarPortatiles.Location = new System.Drawing.Point(0, 360);
+            this.btnConsultarPortatiles.Location = new System.Drawing.Point(0, 315);
             this.btnConsultarPortatiles.Name = "btnConsultarPortatiles";
             this.btnConsultarPortatiles.Size = new System.Drawing.Size(150, 45);
             this.btnConsultarPortatiles.TabIndex = 2;
@@ -129,7 +207,7 @@ namespace mvcComputersCompany
             this.btnRegistrarPortatil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPortatil.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPortatil.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarPortatil.Location = new System.Drawing.Point(0, 280);
+            this.btnRegistrarPortatil.Location = new System.Drawing.Point(0, 235);
             this.btnRegistrarPortatil.Name = "btnRegistrarPortatil";
             this.btnRegistrarPortatil.Size = new System.Drawing.Size(150, 45);
             this.btnRegistrarPortatil.TabIndex = 1;
@@ -144,7 +222,7 @@ namespace mvcComputersCompany
             this.btnRegistrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarEmpresa.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarEmpresa.Location = new System.Drawing.Point(0, 200);
+            this.btnRegistrarEmpresa.Location = new System.Drawing.Point(0, 155);
             this.btnRegistrarEmpresa.Name = "btnRegistrarEmpresa";
             this.btnRegistrarEmpresa.Size = new System.Drawing.Size(150, 45);
             this.btnRegistrarEmpresa.TabIndex = 0;
@@ -155,7 +233,6 @@ namespace mvcComputersCompany
             // pnlBarraTitulo
             // 
             this.pnlBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.pnlBarraTitulo.Controls.Add(this.lblStatus);
             this.pnlBarraTitulo.Controls.Add(this.btnMinimizar);
             this.pnlBarraTitulo.Controls.Add(this.btnSalir);
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -191,17 +268,14 @@ namespace mvcComputersCompany
             this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
             this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
-            // lblStatus
+            // panel1
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(12, 9);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(104, 17);
-            this.lblStatus.TabIndex = 2;
-            this.lblStatus.Text = "No conectado";
-            this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
+            this.panel1.Controls.Add(this.lblStatus);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 520);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(650, 40);
+            this.panel1.TabIndex = 5;
             // 
             // frmMain
             // 
@@ -221,11 +295,13 @@ namespace mvcComputersCompany
             this.pnlForms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backGroundImage)).EndInit();
             this.pnlBarraMenu.ResumeLayout(false);
+            this.pnlBarraMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
-            this.pnlBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -244,6 +320,12 @@ namespace mvcComputersCompany
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox backGroundImage;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.TextBox txbUsuario;
+        private System.Windows.Forms.TextBox txbPassword;
+        private System.Windows.Forms.Button btnConectar;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
