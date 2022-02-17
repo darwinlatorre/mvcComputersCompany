@@ -54,11 +54,18 @@ namespace mvcComputersCompany.datos
                 return false;
             }
         }
-        public void ComprobarConnection()
+        public void CheckClosedConnection()
         {
             if (myConnection.State == ConnectionState.Open)
             {
                 myConnection.Close();
+            }
+        }
+        public void CheckOpenConnection()
+        {
+            if (myConnection.State == ConnectionState.Closed)
+            {
+                myConnection.Open();
             }
         }
         public OracleConnection getMyConnection()
@@ -85,25 +92,6 @@ namespace mvcComputersCompany.datos
             atrConnectionDB = "Data Source = localhost; User ID = " + atrUserDB + "; Password=" + atrPasswordDB + ";";
             myConnection = new OracleConnection(@atrConnectionDB);
         }
-
-
-
-        public void ComprobarDesconexion()
-        {
-            if (myConnection.State == ConnectionState.Open)
-            {
-                myConnection.Close();
-            }
-        }
-
-        public void ComprobarConnection()
-        {
-            if (myConnection.State == ConnectionState.Closed)
-            {
-                myConnection.Open();
-            }
-        }
-
         #endregion
     }
 }

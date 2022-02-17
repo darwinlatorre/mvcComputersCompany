@@ -12,7 +12,7 @@ namespace mvcComputersCompany.datos
         {
             try
             {
-                atrConnecionDB.ComprobarConnection();
+                atrConnecionDB.CheckOpenConnection();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
 
@@ -33,7 +33,7 @@ namespace mvcComputersCompany.datos
             }
             finally
             {
-                atrConnecionDB.ComprobarDesconexion();
+                atrConnecionDB.CheckClosedConnection();
             }
         }
 
@@ -41,7 +41,7 @@ namespace mvcComputersCompany.datos
 
             try
             {
-                atrConnecionDB.ComprobarConnection();
+                atrConnecionDB.CheckOpenConnection();
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConnecionDB.getMyConnection());
 
                 myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2, prmNombreEmpresa, ParameterDirection.Input);
@@ -60,7 +60,7 @@ namespace mvcComputersCompany.datos
             }
             finally
             {
-                atrConnecionDB.ComprobarDesconexion();
+                atrConnecionDB.CheckClosedConnection();
             }
         }
 
