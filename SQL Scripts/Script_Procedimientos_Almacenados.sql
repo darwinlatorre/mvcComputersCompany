@@ -23,7 +23,7 @@ END prcRegistrarPortatil;
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
---TESTING PROCEDURE, IT NOT FINISHED
+--TESTING PROCEDURE, NOT FINISHED
 CREATE OR REPLACE PROCEDURE prcConsPortatilesMarca(P_NOMBRE IN EMPRESA.EM_NOMBRE%TYPE, P_MARCA IN COMPUTADOR.COM_MARCA%TYPE)
 IS
     TYPE portatilesMarcaType IS RECORD
