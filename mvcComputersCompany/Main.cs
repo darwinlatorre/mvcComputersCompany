@@ -10,15 +10,21 @@ namespace mvcComputersCompany
         {
             InitializeComponent();
         }
+
+
+        #region Salir
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        #endregion
+        #region Minimizar
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        #endregion
+        #region Arrastar ventana
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -30,5 +36,6 @@ namespace mvcComputersCompany
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
     }
 }
