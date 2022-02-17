@@ -37,5 +37,29 @@ namespace mvcComputersCompany
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+
+        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        {
+            btnSalir.Size = new System.Drawing.Size(25, 25);
+            btnSalir.Location = new System.Drawing.Point(768, 7);
+        }
+
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.Size = new System.Drawing.Size(20, 20);
+            btnSalir.Location = new System.Drawing.Point(768, 12);
+        }
+
+        private void btnMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            btnMinimizar.Location = new System.Drawing.Point(742, 7);
+        }
+
+        private void btnMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimizar.Size = new System.Drawing.Size(20, 20);
+            btnMinimizar.Location = new System.Drawing.Point(742, 12);
+        }
     }
 }

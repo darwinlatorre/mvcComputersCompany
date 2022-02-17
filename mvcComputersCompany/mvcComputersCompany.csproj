@@ -91,11 +91,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\exitIcon %2820x20%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\minimizeIcon %2820x20%29.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
