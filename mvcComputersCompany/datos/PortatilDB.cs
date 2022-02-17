@@ -6,14 +6,14 @@ namespace mvcComputersCompany.datos
 {
     class PortatilDB
     {
-        static ConnectionDB atrConnecionDB = new ConnectionDB();
+        static ConnectionDB atrConexionDB = new ConnectionDB();
 
         public string InsertarPortatil(string prmNroSerial, int prmNIT, string prmMarca, int prmCapDiscoDuroGB, string prmTipoDiscoDuro, int prmCapMemoriaRamGB, DateTime prmFechaEnsamble)
         {
             try
             {
-                atrConnecionDB.CheckOpenConnection();
-                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConnecionDB.getMyConnection());
+                atrConexionDB.CheckOpenConnection();
+                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConexionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
 
                 myCommand.Parameters.Add("P_NRO_SERIAL", OracleDbType.Varchar2, prmNroSerial, ParameterDirection.Input);
@@ -33,7 +33,7 @@ namespace mvcComputersCompany.datos
             }
             finally
             {
-                atrConnecionDB.CheckClosedConnection();
+                atrConexionDB.CheckClosedConnection();
             }
         }
 
@@ -41,8 +41,8 @@ namespace mvcComputersCompany.datos
 
             try
             {
-                atrConnecionDB.CheckOpenConnection();
-                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConnecionDB.getMyConnection());
+                atrConexionDB.CheckOpenConnection();
+                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConexionDB.getMyConnection());
 
                 myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2, prmNombreEmpresa, ParameterDirection.Input);
                 myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2, prmMarcaPortatil, ParameterDirection.Input);
@@ -60,7 +60,7 @@ namespace mvcComputersCompany.datos
             }
             finally
             {
-                atrConnecionDB.CheckClosedConnection();
+                atrConexionDB.CheckClosedConnection();
             }
         }
 
