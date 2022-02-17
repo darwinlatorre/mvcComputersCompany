@@ -58,6 +58,24 @@ namespace mvcComputersCompany
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+        #region Menu lateral
+        private void btnRegistrarEmpresa_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmRegistrarEmpresa>();
+            btnRegistrarEmpresa.BackColor = Color.FromArgb(81, 96, 90);
+        }
+        private void btnRegistrarPortatil_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmRegistrarPortatil>();
+            btnRegistrarPortatil.BackColor = Color.FromArgb(81, 96, 90);
+        }
+        private void btnConsultarPortatiles_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmConsultarPortatiles>();
+            btnConsultarPortatiles.BackColor = Color.FromArgb(81, 96, 90);
+        }
+        #endregion
+        #region Procedimientos
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -73,26 +91,24 @@ namespace mvcComputersCompany
                 pnlForms.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             else
             {
                 formulario.BringToFront();
             }
         }
-
-        private void btnRegistrarEmpresa_Click(object sender, EventArgs e)
+        private void CloseForms(object sender, FormClosedEventArgs e)
         {
-            AbrirFormulario<frmRegistrarEmpresa>();
-        }
+            if (Application.OpenForms["frmRegistrarEmpresa"] == null)
+                btnRegistrarEmpresa.BackColor = Color.FromArgb(45, 62, 64);
 
-        private void btnRegistrarPortatil_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmRegistrarPortatil>();
-        }
+            if (Application.OpenForms["frmRegistrarPortatil"] == null)
+                btnRegistrarPortatil.BackColor = Color.FromArgb(45, 62, 64);
 
-        private void btnConsultarPortatiles_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmConsultarPortatiles>();
+            if (Application.OpenForms["frmConsultarPortatiles"] == null)
+                btnConsultarPortatiles.BackColor = Color.FromArgb(45, 62, 64);
         }
+        #endregion
     }
 }

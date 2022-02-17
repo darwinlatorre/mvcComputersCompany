@@ -93,9 +93,9 @@ namespace mvcComputersCompany
             this.btnConsultarPortatiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarPortatiles.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarPortatiles.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarPortatiles.Location = new System.Drawing.Point(12, 360);
+            this.btnConsultarPortatiles.Location = new System.Drawing.Point(0, 360);
             this.btnConsultarPortatiles.Name = "btnConsultarPortatiles";
-            this.btnConsultarPortatiles.Size = new System.Drawing.Size(132, 45);
+            this.btnConsultarPortatiles.Size = new System.Drawing.Size(150, 45);
             this.btnConsultarPortatiles.TabIndex = 2;
             this.btnConsultarPortatiles.Text = "Consultar Portatiles";
             this.btnConsultarPortatiles.UseVisualStyleBackColor = false;
@@ -108,9 +108,9 @@ namespace mvcComputersCompany
             this.btnRegistrarPortatil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPortatil.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPortatil.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarPortatil.Location = new System.Drawing.Point(12, 280);
+            this.btnRegistrarPortatil.Location = new System.Drawing.Point(0, 280);
             this.btnRegistrarPortatil.Name = "btnRegistrarPortatil";
-            this.btnRegistrarPortatil.Size = new System.Drawing.Size(132, 45);
+            this.btnRegistrarPortatil.Size = new System.Drawing.Size(150, 45);
             this.btnRegistrarPortatil.TabIndex = 1;
             this.btnRegistrarPortatil.Text = "Registrar Portatil";
             this.btnRegistrarPortatil.UseVisualStyleBackColor = false;
@@ -123,9 +123,9 @@ namespace mvcComputersCompany
             this.btnRegistrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarEmpresa.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarEmpresa.Location = new System.Drawing.Point(12, 200);
+            this.btnRegistrarEmpresa.Location = new System.Drawing.Point(0, 200);
             this.btnRegistrarEmpresa.Name = "btnRegistrarEmpresa";
-            this.btnRegistrarEmpresa.Size = new System.Drawing.Size(132, 45);
+            this.btnRegistrarEmpresa.Size = new System.Drawing.Size(150, 45);
             this.btnRegistrarEmpresa.TabIndex = 0;
             this.btnRegistrarEmpresa.Text = "Registrar Empresa";
             this.btnRegistrarEmpresa.UseVisualStyleBackColor = false;
