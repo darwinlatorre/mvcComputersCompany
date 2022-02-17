@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Oracle.DataAccess.Client;
 using System.Data;
 using mvcComputersCompany.datos;
 
@@ -17,9 +12,9 @@ namespace mvcComputersCompany.logica
             return atrPortatil.InsertarPortatil(prmNroSerial, prmNIT, prmMarca, prmCapDiscoDuroGB, prmTipoDiscoDuro, prmCapMemoriaRamGB, prmFechaEnsamble);
         }
 
-        public DataSet ConsultarPotatilxMarca(string prmNombre, string prmMarca) 
+        public DataSet ConsultarPotatilxMarca(string prmNombreEmpresa, string prmMarcaPortatil) 
         {
-            return atrPortatil.ConsultaPortatilesMarca(prmNombre, prmMarca);
+            return atrPortatil.ConsultaPortatilesMarca(prmNombreEmpresa, prmMarcaPortatil);
         }
     }
 }
