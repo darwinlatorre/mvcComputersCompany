@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Oracle.DataAccess.Client;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Data;
 
 namespace mvcComputersCompany.datos
@@ -36,6 +32,14 @@ namespace mvcComputersCompany.datos
                 return "ERROR: " + e.Message;
             }
         }
+
+
+        //public OracleConnection getMyConnection() 
+        //{
+        //    myConnection.Open();
+        //    return myConnection;
+        //}
+
         public void ComprobarConnection()
         {
             if (myConnection.State == ConnectionState.Open)
