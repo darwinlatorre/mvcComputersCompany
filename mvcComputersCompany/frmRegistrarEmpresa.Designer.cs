@@ -45,7 +45,7 @@ namespace mvcComputersCompany
             // 
             this.lblRegistrarEmpresa.AutoSize = true;
             this.lblRegistrarEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrarEmpresa.Location = new System.Drawing.Point(12, 21);
+            this.lblRegistrarEmpresa.Location = new System.Drawing.Point(12, 16);
             this.lblRegistrarEmpresa.Name = "lblRegistrarEmpresa";
             this.lblRegistrarEmpresa.Size = new System.Drawing.Size(163, 21);
             this.lblRegistrarEmpresa.TabIndex = 0;
