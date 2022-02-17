@@ -11,7 +11,11 @@ namespace mvcComputersCompany.datos
         public string InsertarEmpresa(int prmNit, string prmNombre, DateTime prmFechaCreacion) {
             try
             {
+
                 OracleCommand myCommand = new OracleCommand(ConnectionDB.getUser() + ".prcRegistrarEmpresa", atrConnecionDB.getMyConnection());
+                atrConnecionDB.ComprobarConnection();
+                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarEmpresa", atrConnecionDB.getMyConnection());
+
                 myCommand.CommandType = CommandType.StoredProcedure;
                 
                 myCommand.Parameters.Add("P_NIT", OracleDbType.Int64, prmNit, ParameterDirection.Input);
@@ -27,7 +31,7 @@ namespace mvcComputersCompany.datos
             }
             finally 
             {
-                atrConnecionDB.ComprobarConnection();
+                atrConnecionDB.ComprobarDesconexion();
             }
         }
     }
