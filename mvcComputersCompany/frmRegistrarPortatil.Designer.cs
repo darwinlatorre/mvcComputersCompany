@@ -47,6 +47,7 @@ namespace mvcComputersCompany
             this.dtpFechaEnsamblaje = new System.Windows.Forms.DateTimePicker();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.cbTipoDisco = new System.Windows.Forms.ComboBox();
+            this.lblRegistrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnFinalizar
@@ -69,6 +70,7 @@ namespace mvcComputersCompany
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblRegistrarPortatil
             // 
@@ -227,11 +229,22 @@ namespace mvcComputersCompany
             this.cbTipoDisco.Size = new System.Drawing.Size(200, 23);
             this.cbTipoDisco.TabIndex = 28;
             // 
+            // lblRegistrar
+            // 
+            this.lblRegistrar.AutoSize = true;
+            this.lblRegistrar.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrar.Location = new System.Drawing.Point(12, 491);
+            this.lblRegistrar.Name = "lblRegistrar";
+            this.lblRegistrar.Size = new System.Drawing.Size(0, 21);
+            this.lblRegistrar.TabIndex = 29;
+            this.lblRegistrar.Visible = false;
+            // 
             // frmRegistrarPortatil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 521);
+            this.Controls.Add(this.lblRegistrar);
             this.Controls.Add(this.cbTipoDisco);
             this.Controls.Add(this.cbMarca);
             this.Controls.Add(this.dtpFechaEnsamblaje);
@@ -276,5 +289,6 @@ namespace mvcComputersCompany
         private System.Windows.Forms.DateTimePicker dtpFechaEnsamblaje;
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.ComboBox cbTipoDisco;
+        private System.Windows.Forms.Label lblRegistrar;
     }
 }

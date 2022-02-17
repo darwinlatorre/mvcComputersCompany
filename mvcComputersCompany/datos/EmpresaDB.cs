@@ -15,7 +15,7 @@ namespace mvcComputersCompany.datos
         public string InsertarEmpresa(int prmNit, string prmNombre, DateTime prmFechaCreacion) {
             try
             {
-                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarEmpresa", atrConnecionDB.getMyConnection());
+                OracleCommand myCommand = new OracleCommand(ConnectionDB.getUser() + ".prcRegistrarEmpresa", atrConnecionDB.getMyConnection());
                 myCommand.CommandType = CommandType.StoredProcedure;
                 
                 myCommand.Parameters.Add("P_NIT", OracleDbType.Int64, prmNit, ParameterDirection.Input);
@@ -25,9 +25,9 @@ namespace mvcComputersCompany.datos
                 myCommand.ExecuteNonQuery();
                 return "Se ha registrado la empresa";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return "No se ha registrado la empresa";
+                return "ERROR: " + e.Message;
             }
             finally 
             {
