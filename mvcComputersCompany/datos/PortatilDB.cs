@@ -17,6 +17,8 @@ namespace mvcComputersCompany.datos
             try
             {
                 OracleCommand myCommand = new OracleCommand("ComputersCompany.prcRegistrarPortatil", atrConnecionDB.getMyConnection());
+                myCommand.CommandType = CommandType.StoredProcedure;
+
                 myCommand.Parameters.Add("P_NRO_SERIAL", OracleDbType.Varchar2, prmNroSerial, ParameterDirection.Input);
                 myCommand.Parameters.Add("P_NIT", OracleDbType.Int64, prmNIT, ParameterDirection.Input);
                 myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2, prmMarca, ParameterDirection.Input);
@@ -24,7 +26,8 @@ namespace mvcComputersCompany.datos
                 myCommand.Parameters.Add("P_TIPO_DISCO_DURO", OracleDbType.Varchar2, prmTipoDiscoDuro, ParameterDirection.Input);
                 myCommand.Parameters.Add("P_CAP_MEMORIA_RAM_GB", OracleDbType.Int64, prmCapMemoriaRamGB, ParameterDirection.Input);
                 myCommand.Parameters.Add("P_FECHA_ENSAMBLE", OracleDbType.Date, prmFechaEnsamble, ParameterDirection.Input);
-                myCommand.CommandType = CommandType.StoredProcedure;
+                
+                myCommand.ExecuteNonQuery();
                 return "Se ha registrado el portatil";
             }
             catch (Exception)
@@ -38,11 +41,34 @@ namespace mvcComputersCompany.datos
         }
 
         public DataSet ConsultaPortatilesMarca(string prmNombre, string prmMarca) {
-            DataSet varDataSet = new DataSet();
 
-            //TODO:
-
-            return varDataSet;
+            try
+            {
+                OracleCommand myCommand = new OracleCommand("ComputersCompany.prcConsPortatilesMarca", atrConnecionDB.getMyConnection());
+                myCommand.CommandType = CommandType.StoredProcedure;
+                DataSet varDataSet = new DataSet();
+                // Testing new parameters
+                myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2).Value = prmNombre;
+                myCommand.Parameters.Add("P_MARCA", OracleDbType.Varchar2).Value = prmMarca;
+                myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                
+                OracleDataReader varReader = myCommand.ExecuteReader();
+                
+                OracleDataAdapter varAdapter = new OracleDataAdapter(myCommand);
+                varAdapter.TableMappings.Add("Table", "Portatiles Por Marca");
+                varAdapter.Fill(varDataSet);
+                
+                varReader.Close();
+                return varDataSet;
+            }
+            catch (Exception)
+            {
+                return new DataSet();
+            }
+            finally
+            {
+                atrConnecionDB.ComprobarConnection();
+            }
         }
 
     }

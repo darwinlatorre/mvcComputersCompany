@@ -30,7 +30,7 @@ END prcRegistrarPortatil;
 
 -- FIRST PROCEDURE VARIANT --------------------------------------------------------------------------------------------------------
 
-CREATE OR REPLACE PROCEDURE prcConsPortatilesMarca(P_NOMBRE IN EMPRESA.EM_NOMBRE%TYPE, P_MARCA IN COMPUTADOR.COM_MARCA%TYPE, P_CURSOR_DATOS IN OUT SYS_REFCURSOR)
+CREATE OR REPLACE PROCEDURE prcConsPortatilesMarca(P_NOMBRE IN EMPRESA.EM_NOMBRE%TYPE, P_MARCA IN COMPUTADOR.COM_MARCA%TYPE, P_CURSOR_DATOS OUT SYS_REFCURSOR)
 AS
 BEGIN
     OPEN P_CURSOR_DATOS FOR 
@@ -41,9 +41,8 @@ BEGIN
         WHERE (P_NOMBRE LIKE EMPRESA.EM_NOMBRE AND P_MARCA LIKE COMPUTADOR.COM_MARCA);
 END prcConsPortatilesMarca;
 
-SET SERVEROUTPUT ON
-
 -- TEST prcConsPortatilesMarca ----------------------------------------------------------------------------------------------------
+SET SERVEROUTPUT ON
 
 DECLARE
     V_CURSOR SYS_REFCURSOR;
@@ -51,7 +50,7 @@ DECLARE
     v_cap_disco_duro_gb COMPUTADOR.COM_CAP_DISCO_DURO_GB%TYPE;
     v_cap_memoria_ram_gb COMPUTADOR.COM_CAP_MEMORIA_RAM_GB%TYPE;
 BEGIN
-    prcConsPortatilesMarca('SpeedLogic', 'Asus', V_CURSOR);
+    prcConsPortatilesMarca('The Eternal Tao', 'Asus', V_CURSOR);
         LOOP
             FETCH V_CURSOR 
             INTO v_serial, v_cap_disco_duro_gb, v_cap_memoria_ram_gb;
