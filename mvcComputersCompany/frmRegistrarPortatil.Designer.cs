@@ -37,9 +37,17 @@ namespace mvcComputersCompany
             this.lblNit = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCapacidadDisco = new System.Windows.Forms.Label();
-            this.lblTipoDiscoDuro = new System.Windows.Forms.Label();
+            this.lblTipoDisco = new System.Windows.Forms.Label();
             this.lblCapacidadRam = new System.Windows.Forms.Label();
             this.lblFechaEnsamblaje = new System.Windows.Forms.Label();
+            this.txbSerial = new System.Windows.Forms.TextBox();
+            this.txbNit = new System.Windows.Forms.TextBox();
+            this.txbCapacidadDisco = new System.Windows.Forms.TextBox();
+            this.txbCapacidadRam = new System.Windows.Forms.TextBox();
+            this.dtpFechaEnsamblaje = new System.Windows.Forms.DateTimePicker();
+            this.cbMarca = new System.Windows.Forms.ComboBox();
+            this.cbTipoDisco = new System.Windows.Forms.ComboBox();
+            this.lblRegistrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnFinalizar
@@ -56,12 +64,13 @@ namespace mvcComputersCompany
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(275, 420);
+            this.btnRegistrar.Location = new System.Drawing.Point(275, 430);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(100, 30);
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblRegistrarPortatil
             // 
@@ -77,7 +86,7 @@ namespace mvcComputersCompany
             // 
             this.lblDatosPortatil.AutoSize = true;
             this.lblDatosPortatil.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosPortatil.Location = new System.Drawing.Point(190, 100);
+            this.lblDatosPortatil.Location = new System.Drawing.Point(190, 80);
             this.lblDatosPortatil.Name = "lblDatosPortatil";
             this.lblDatosPortatil.Size = new System.Drawing.Size(271, 21);
             this.lblDatosPortatil.TabIndex = 12;
@@ -87,7 +96,7 @@ namespace mvcComputersCompany
             // 
             this.lblSerial.AutoSize = true;
             this.lblSerial.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerial.Location = new System.Drawing.Point(120, 140);
+            this.lblSerial.Location = new System.Drawing.Point(100, 140);
             this.lblSerial.Name = "lblSerial";
             this.lblSerial.Size = new System.Drawing.Size(112, 17);
             this.lblSerial.TabIndex = 13;
@@ -97,7 +106,7 @@ namespace mvcComputersCompany
             // 
             this.lblNit.AutoSize = true;
             this.lblNit.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNit.Location = new System.Drawing.Point(120, 170);
+            this.lblNit.Location = new System.Drawing.Point(100, 180);
             this.lblNit.Name = "lblNit";
             this.lblNit.Size = new System.Drawing.Size(32, 17);
             this.lblNit.TabIndex = 14;
@@ -107,7 +116,7 @@ namespace mvcComputersCompany
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(120, 200);
+            this.lblMarca.Location = new System.Drawing.Point(100, 220);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(48, 17);
             this.lblMarca.TabIndex = 15;
@@ -117,27 +126,27 @@ namespace mvcComputersCompany
             // 
             this.lblCapacidadDisco.AutoSize = true;
             this.lblCapacidadDisco.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacidadDisco.Location = new System.Drawing.Point(120, 230);
+            this.lblCapacidadDisco.Location = new System.Drawing.Point(100, 260);
             this.lblCapacidadDisco.Name = "lblCapacidadDisco";
             this.lblCapacidadDisco.Size = new System.Drawing.Size(200, 17);
             this.lblCapacidadDisco.TabIndex = 16;
             this.lblCapacidadDisco.Text = "Capacidad del disco duro";
             // 
-            // lblTipoDiscoDuro
+            // lblTipoDisco
             // 
-            this.lblTipoDiscoDuro.AutoSize = true;
-            this.lblTipoDiscoDuro.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoDiscoDuro.Location = new System.Drawing.Point(120, 260);
-            this.lblTipoDiscoDuro.Name = "lblTipoDiscoDuro";
-            this.lblTipoDiscoDuro.Size = new System.Drawing.Size(152, 17);
-            this.lblTipoDiscoDuro.TabIndex = 17;
-            this.lblTipoDiscoDuro.Text = "Tipo de disco duro";
+            this.lblTipoDisco.AutoSize = true;
+            this.lblTipoDisco.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoDisco.Location = new System.Drawing.Point(100, 300);
+            this.lblTipoDisco.Name = "lblTipoDisco";
+            this.lblTipoDisco.Size = new System.Drawing.Size(152, 17);
+            this.lblTipoDisco.TabIndex = 17;
+            this.lblTipoDisco.Text = "Tipo de disco duro";
             // 
             // lblCapacidadRam
             // 
             this.lblCapacidadRam.AutoSize = true;
             this.lblCapacidadRam.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacidadRam.Location = new System.Drawing.Point(120, 290);
+            this.lblCapacidadRam.Location = new System.Drawing.Point(100, 340);
             this.lblCapacidadRam.Name = "lblCapacidadRam";
             this.lblCapacidadRam.Size = new System.Drawing.Size(200, 17);
             this.lblCapacidadRam.TabIndex = 18;
@@ -147,20 +156,105 @@ namespace mvcComputersCompany
             // 
             this.lblFechaEnsamblaje.AutoSize = true;
             this.lblFechaEnsamblaje.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaEnsamblaje.Location = new System.Drawing.Point(120, 320);
+            this.lblFechaEnsamblaje.Location = new System.Drawing.Point(100, 380);
             this.lblFechaEnsamblaje.Name = "lblFechaEnsamblaje";
             this.lblFechaEnsamblaje.Size = new System.Drawing.Size(160, 17);
             this.lblFechaEnsamblaje.TabIndex = 19;
             this.lblFechaEnsamblaje.Text = "Fecha de ensamblaje";
+            // 
+            // txbSerial
+            // 
+            this.txbSerial.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSerial.Location = new System.Drawing.Point(350, 140);
+            this.txbSerial.Name = "txbSerial";
+            this.txbSerial.Size = new System.Drawing.Size(200, 20);
+            this.txbSerial.TabIndex = 20;
+            // 
+            // txbNit
+            // 
+            this.txbNit.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNit.Location = new System.Drawing.Point(350, 180);
+            this.txbNit.Name = "txbNit";
+            this.txbNit.Size = new System.Drawing.Size(200, 20);
+            this.txbNit.TabIndex = 21;
+            // 
+            // txbCapacidadDisco
+            // 
+            this.txbCapacidadDisco.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCapacidadDisco.Location = new System.Drawing.Point(350, 260);
+            this.txbCapacidadDisco.Name = "txbCapacidadDisco";
+            this.txbCapacidadDisco.Size = new System.Drawing.Size(200, 20);
+            this.txbCapacidadDisco.TabIndex = 23;
+            // 
+            // txbCapacidadRam
+            // 
+            this.txbCapacidadRam.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCapacidadRam.Location = new System.Drawing.Point(350, 340);
+            this.txbCapacidadRam.Name = "txbCapacidadRam";
+            this.txbCapacidadRam.Size = new System.Drawing.Size(200, 20);
+            this.txbCapacidadRam.TabIndex = 25;
+            // 
+            // dtpFechaEnsamblaje
+            // 
+            this.dtpFechaEnsamblaje.CalendarFont = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaEnsamblaje.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaEnsamblaje.Location = new System.Drawing.Point(350, 380);
+            this.dtpFechaEnsamblaje.Name = "dtpFechaEnsamblaje";
+            this.dtpFechaEnsamblaje.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaEnsamblaje.TabIndex = 26;
+            // 
+            // cbMarca
+            // 
+            this.cbMarca.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMarca.FormattingEnabled = true;
+            this.cbMarca.Items.AddRange(new object[] {
+            "Asus",
+            "Dell",
+            "Lenovo"});
+            this.cbMarca.Location = new System.Drawing.Point(350, 220);
+            this.cbMarca.Name = "cbMarca";
+            this.cbMarca.Size = new System.Drawing.Size(200, 23);
+            this.cbMarca.TabIndex = 27;
+            // 
+            // cbTipoDisco
+            // 
+            this.cbTipoDisco.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoDisco.FormattingEnabled = true;
+            this.cbTipoDisco.Items.AddRange(new object[] {
+            "HDD",
+            "NVME",
+            "SSD"});
+            this.cbTipoDisco.Location = new System.Drawing.Point(350, 300);
+            this.cbTipoDisco.Name = "cbTipoDisco";
+            this.cbTipoDisco.Size = new System.Drawing.Size(200, 23);
+            this.cbTipoDisco.TabIndex = 28;
+            // 
+            // lblRegistrar
+            // 
+            this.lblRegistrar.AutoSize = true;
+            this.lblRegistrar.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrar.Location = new System.Drawing.Point(12, 491);
+            this.lblRegistrar.Name = "lblRegistrar";
+            this.lblRegistrar.Size = new System.Drawing.Size(0, 21);
+            this.lblRegistrar.TabIndex = 29;
+            this.lblRegistrar.Visible = false;
             // 
             // frmRegistrarPortatil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 521);
+            this.Controls.Add(this.lblRegistrar);
+            this.Controls.Add(this.cbTipoDisco);
+            this.Controls.Add(this.cbMarca);
+            this.Controls.Add(this.dtpFechaEnsamblaje);
+            this.Controls.Add(this.txbCapacidadRam);
+            this.Controls.Add(this.txbCapacidadDisco);
+            this.Controls.Add(this.txbNit);
+            this.Controls.Add(this.txbSerial);
             this.Controls.Add(this.lblFechaEnsamblaje);
             this.Controls.Add(this.lblCapacidadRam);
-            this.Controls.Add(this.lblTipoDiscoDuro);
+            this.Controls.Add(this.lblTipoDisco);
             this.Controls.Add(this.lblCapacidadDisco);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblNit);
@@ -185,8 +279,16 @@ namespace mvcComputersCompany
         private System.Windows.Forms.Label lblNit;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCapacidadDisco;
-        private System.Windows.Forms.Label lblTipoDiscoDuro;
+        private System.Windows.Forms.Label lblTipoDisco;
         private System.Windows.Forms.Label lblCapacidadRam;
         private System.Windows.Forms.Label lblFechaEnsamblaje;
+        private System.Windows.Forms.TextBox txbSerial;
+        private System.Windows.Forms.TextBox txbNit;
+        private System.Windows.Forms.TextBox txbCapacidadDisco;
+        private System.Windows.Forms.TextBox txbCapacidadRam;
+        private System.Windows.Forms.DateTimePicker dtpFechaEnsamblaje;
+        private System.Windows.Forms.ComboBox cbMarca;
+        private System.Windows.Forms.ComboBox cbTipoDisco;
+        private System.Windows.Forms.Label lblRegistrar;
     }
 }

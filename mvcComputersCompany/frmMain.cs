@@ -110,13 +110,19 @@ namespace mvcComputersCompany
             if (Application.OpenForms["frmConsultarPortatiles"] == null)
                 btnConsultarPortatiles.BackColor = Color.FromArgb(45, 62, 64);
         }
-        #endregion
         private void btnConectar_Click(object sender, EventArgs e)
         {
             ConnectionDB.setUser(txbUsuario.Text);
             ConnectionDB.setPassword(txbPassword.Text);
-            ConnectionDB.Conectar();
-            lblStatus.Text = ConnectionDB.getStatus();
+            ConnectionDB.conectar();
+            if (ConnectionDB.boolStatus())
+            {
+                btnRegistrarEmpresa.Enabled = true;
+                btnRegistrarPortatil.Enabled = true;
+                btnConsultarPortatiles.Enabled = true;
+            }
+            lblStatus.Text = ConnectionDB.stringStatus();
         }
+        #endregion
     }
 }

@@ -5,8 +5,8 @@ namespace mvcComputersCompany.logica
 {
     class Empresa
     {
-        EmpresaDB atrEmpresa = new EmpresaDB();
-        public string RegistrarEmpresa(int prmNit, string prmNombre, DateTime prmFechaCreacion) 
+        static EmpresaDB atrEmpresa = new EmpresaDB();
+        public static string RegistrarEmpresa(int prmNit, string prmNombre, DateTime prmFechaCreacion) 
         {
             return atrEmpresa.InsertarEmpresa(prmNit, prmNombre, prmFechaCreacion);
         }
