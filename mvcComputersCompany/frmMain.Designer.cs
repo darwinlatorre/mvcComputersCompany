@@ -268,6 +268,7 @@ namespace mvcComputersCompany
             this.lblTitle.Size = new System.Drawing.Size(243, 25);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Venta de computadoras";
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitle_MouseDown);
             // 
             // btnMinimizar
             // 
