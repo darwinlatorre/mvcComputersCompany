@@ -54,6 +54,12 @@
     <Compile Include="datos\ConnectionDB.cs" />
     <Compile Include="datos\EmpresaDB.cs" />
     <Compile Include="datos\PortatilDB.cs" />
+    <Compile Include="frmDiccionarioDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiccionarioDatos.Designer.cs">
+      <DependentUpon>frmDiccionarioDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConsultarPortatiles.resx">
       <DependentUpon>frmConsultarPortatiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiccionarioDatos.resx">
+      <DependentUpon>frmDiccionarioDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
