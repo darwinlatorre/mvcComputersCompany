@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace mvcComputersCompany
 {
-    public partial class frmDiccionarioDatos : Form
+    public partial class frmListaRestricciones : Form
     {
-        public frmDiccionarioDatos()
+        public frmListaRestricciones()
         {
             InitializeComponent();
         }
+
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        //TO DO
     }
 }

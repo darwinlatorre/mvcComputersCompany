@@ -42,9 +42,9 @@ namespace mvcComputersCompany
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.txbUsuario = new System.Windows.Forms.TextBox();
             this.iconImage = new System.Windows.Forms.PictureBox();
-            this.btnConsultarPortatiles = new System.Windows.Forms.Button();
-            this.btnRegistrarPortatil = new System.Windows.Forms.Button();
-            this.btnRegistrarEmpresa = new System.Windows.Forms.Button();
+            this.btnInformacionTabla = new System.Windows.Forms.Button();
+            this.btnListaRestricciones = new System.Windows.Forms.Button();
+            this.btnAlmacenamiento = new System.Windows.Forms.Button();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -122,9 +122,9 @@ namespace mvcComputersCompany
             this.pnlBarraMenu.Controls.Add(this.txbPassword);
             this.pnlBarraMenu.Controls.Add(this.txbUsuario);
             this.pnlBarraMenu.Controls.Add(this.iconImage);
-            this.pnlBarraMenu.Controls.Add(this.btnConsultarPortatiles);
-            this.pnlBarraMenu.Controls.Add(this.btnRegistrarPortatil);
-            this.pnlBarraMenu.Controls.Add(this.btnRegistrarEmpresa);
+            this.pnlBarraMenu.Controls.Add(this.btnInformacionTabla);
+            this.pnlBarraMenu.Controls.Add(this.btnListaRestricciones);
+            this.pnlBarraMenu.Controls.Add(this.btnAlmacenamiento);
             this.pnlBarraMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlBarraMenu.Location = new System.Drawing.Point(0, 40);
             this.pnlBarraMenu.Name = "pnlBarraMenu";
@@ -177,6 +177,7 @@ namespace mvcComputersCompany
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(100, 20);
             this.txbPassword.TabIndex = 5;
+            this.txbPassword.Text = "oracle";
             // 
             // txbUsuario
             // 
@@ -186,6 +187,7 @@ namespace mvcComputersCompany
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(100, 20);
             this.txbUsuario.TabIndex = 4;
+            this.txbUsuario.Text = "prueba";
             // 
             // iconImage
             // 
@@ -197,53 +199,53 @@ namespace mvcComputersCompany
             this.iconImage.TabIndex = 3;
             this.iconImage.TabStop = false;
             // 
-            // btnConsultarPortatiles
+            // btnInformacionTabla
             // 
-            this.btnConsultarPortatiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.btnConsultarPortatiles.Enabled = false;
-            this.btnConsultarPortatiles.FlatAppearance.BorderSize = 0;
-            this.btnConsultarPortatiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarPortatiles.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarPortatiles.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarPortatiles.Location = new System.Drawing.Point(0, 315);
-            this.btnConsultarPortatiles.Name = "btnConsultarPortatiles";
-            this.btnConsultarPortatiles.Size = new System.Drawing.Size(150, 45);
-            this.btnConsultarPortatiles.TabIndex = 2;
-            this.btnConsultarPortatiles.Text = "Consultar Portatiles";
-            this.btnConsultarPortatiles.UseVisualStyleBackColor = false;
-            this.btnConsultarPortatiles.Click += new System.EventHandler(this.btnConsultarPortatiles_Click);
+            this.btnInformacionTabla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnInformacionTabla.Enabled = false;
+            this.btnInformacionTabla.FlatAppearance.BorderSize = 0;
+            this.btnInformacionTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformacionTabla.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformacionTabla.ForeColor = System.Drawing.Color.White;
+            this.btnInformacionTabla.Location = new System.Drawing.Point(0, 315);
+            this.btnInformacionTabla.Name = "btnInformacionTabla";
+            this.btnInformacionTabla.Size = new System.Drawing.Size(150, 45);
+            this.btnInformacionTabla.TabIndex = 2;
+            this.btnInformacionTabla.Text = "Informacion de tabla";
+            this.btnInformacionTabla.UseVisualStyleBackColor = false;
+            this.btnInformacionTabla.Click += new System.EventHandler(this.btnInformacionTabla_Click);
             // 
-            // btnRegistrarPortatil
+            // btnListaRestricciones
             // 
-            this.btnRegistrarPortatil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.btnRegistrarPortatil.Enabled = false;
-            this.btnRegistrarPortatil.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarPortatil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarPortatil.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarPortatil.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarPortatil.Location = new System.Drawing.Point(0, 235);
-            this.btnRegistrarPortatil.Name = "btnRegistrarPortatil";
-            this.btnRegistrarPortatil.Size = new System.Drawing.Size(150, 45);
-            this.btnRegistrarPortatil.TabIndex = 1;
-            this.btnRegistrarPortatil.Text = "Registrar Portatil";
-            this.btnRegistrarPortatil.UseVisualStyleBackColor = false;
-            this.btnRegistrarPortatil.Click += new System.EventHandler(this.btnRegistrarPortatil_Click);
+            this.btnListaRestricciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnListaRestricciones.Enabled = false;
+            this.btnListaRestricciones.FlatAppearance.BorderSize = 0;
+            this.btnListaRestricciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaRestricciones.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaRestricciones.ForeColor = System.Drawing.Color.White;
+            this.btnListaRestricciones.Location = new System.Drawing.Point(0, 235);
+            this.btnListaRestricciones.Name = "btnListaRestricciones";
+            this.btnListaRestricciones.Size = new System.Drawing.Size(150, 45);
+            this.btnListaRestricciones.TabIndex = 1;
+            this.btnListaRestricciones.Text = "Lista de restricciones";
+            this.btnListaRestricciones.UseVisualStyleBackColor = false;
+            this.btnListaRestricciones.Click += new System.EventHandler(this.btnListaRestricciones_Click);
             // 
-            // btnRegistrarEmpresa
+            // btnAlmacenamiento
             // 
-            this.btnRegistrarEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.btnRegistrarEmpresa.Enabled = false;
-            this.btnRegistrarEmpresa.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarEmpresa.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarEmpresa.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarEmpresa.Location = new System.Drawing.Point(0, 155);
-            this.btnRegistrarEmpresa.Name = "btnRegistrarEmpresa";
-            this.btnRegistrarEmpresa.Size = new System.Drawing.Size(150, 45);
-            this.btnRegistrarEmpresa.TabIndex = 0;
-            this.btnRegistrarEmpresa.Text = "Registrar Empresa";
-            this.btnRegistrarEmpresa.UseVisualStyleBackColor = false;
-            this.btnRegistrarEmpresa.Click += new System.EventHandler(this.btnRegistrarEmpresa_Click);
+            this.btnAlmacenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.btnAlmacenamiento.Enabled = false;
+            this.btnAlmacenamiento.FlatAppearance.BorderSize = 0;
+            this.btnAlmacenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlmacenamiento.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlmacenamiento.ForeColor = System.Drawing.Color.White;
+            this.btnAlmacenamiento.Location = new System.Drawing.Point(0, 155);
+            this.btnAlmacenamiento.Name = "btnAlmacenamiento";
+            this.btnAlmacenamiento.Size = new System.Drawing.Size(150, 45);
+            this.btnAlmacenamiento.TabIndex = 0;
+            this.btnAlmacenamiento.Text = "Almacenamiento";
+            this.btnAlmacenamiento.UseVisualStyleBackColor = false;
+            this.btnAlmacenamiento.Click += new System.EventHandler(this.btnAlmacenamiento_Click);
             // 
             // pnlBarraTitulo
             // 
@@ -265,9 +267,9 @@ namespace mvcComputersCompany
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(12, 7);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(243, 25);
+            this.lblTitle.Size = new System.Drawing.Size(298, 25);
             this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "Venta de computadoras";
+            this.lblTitle.Text = "Visor Diccionario de Datos";
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitle_MouseDown);
             // 
             // btnMinimizar
@@ -335,9 +337,9 @@ namespace mvcComputersCompany
         private System.Windows.Forms.Panel pnlForms;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.PictureBox btnMinimizar;
-        private System.Windows.Forms.Button btnConsultarPortatiles;
-        private System.Windows.Forms.Button btnRegistrarPortatil;
-        private System.Windows.Forms.Button btnRegistrarEmpresa;
+        private System.Windows.Forms.Button btnInformacionTabla;
+        private System.Windows.Forms.Button btnListaRestricciones;
+        private System.Windows.Forms.Button btnAlmacenamiento;
         private System.Windows.Forms.PictureBox iconImage;
         private System.Windows.Forms.PictureBox backGroundImage;
         private System.Windows.Forms.Label lblStatus;

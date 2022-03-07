@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,29 +55,23 @@
     <Compile Include="datos\ConnectionDB.cs" />
     <Compile Include="datos\EmpresaDB.cs" />
     <Compile Include="datos\PortatilDB.cs" />
-    <Compile Include="frmDiccionarioDatos.cs">
+    <Compile Include="frmAlmacenamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDiccionarioDatos.Designer.cs">
-      <DependentUpon>frmDiccionarioDatos.cs</DependentUpon>
+    <Compile Include="frmAlmacenamiento.Designer.cs">
+      <DependentUpon>frmAlmacenamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarEmpresa.cs">
+    <Compile Include="frmInformacionTabla.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarEmpresa.Designer.cs">
-      <DependentUpon>frmRegistrarEmpresa.cs</DependentUpon>
+    <Compile Include="frmInformacionTabla.Designer.cs">
+      <DependentUpon>frmInformacionTabla.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarPortatil.cs">
+    <Compile Include="frmListaRestricciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarPortatil.Designer.cs">
-      <DependentUpon>frmRegistrarPortatil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmConsultarPortatiles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultarPortatiles.Designer.cs">
-      <DependentUpon>frmConsultarPortatiles.cs</DependentUpon>
+    <Compile Include="frmListaRestricciones.Designer.cs">
+      <DependentUpon>frmListaRestricciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -88,11 +83,14 @@
     <Compile Include="logica\Portatil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmConsultarPortatiles.resx">
-      <DependentUpon>frmConsultarPortatiles.cs</DependentUpon>
+    <EmbeddedResource Include="frmAlmacenamiento.resx">
+      <DependentUpon>frmAlmacenamiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDiccionarioDatos.resx">
-      <DependentUpon>frmDiccionarioDatos.cs</DependentUpon>
+    <EmbeddedResource Include="frmInformacionTabla.resx">
+      <DependentUpon>frmInformacionTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaRestricciones.resx">
+      <DependentUpon>frmListaRestricciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -101,12 +99,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarEmpresa.resx">
-      <DependentUpon>frmRegistrarEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarPortatil.resx">
-      <DependentUpon>frmRegistrarPortatil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

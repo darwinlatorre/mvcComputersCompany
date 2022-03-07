@@ -65,20 +65,20 @@ namespace mvcComputersCompany
         }
         #endregion
         #region Menu lateral
-        private void btnRegistrarEmpresa_Click(object sender, EventArgs e)
+        private void btnAlmacenamiento_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmRegistrarEmpresa>();
-            btnRegistrarEmpresa.BackColor = Color.FromArgb(81, 96, 90);
+            AbrirFormulario<frmAlmacenamiento>();
+            btnAlmacenamiento.BackColor = Color.FromArgb(81, 96, 90);
         }
-        private void btnRegistrarPortatil_Click(object sender, EventArgs e)
+        private void btnListaRestricciones_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmRegistrarPortatil>();
-            btnRegistrarPortatil.BackColor = Color.FromArgb(81, 96, 90);
+            AbrirFormulario<frmListaRestricciones>();
+            btnListaRestricciones.BackColor = Color.FromArgb(81, 96, 90);
         }
-        private void btnConsultarPortatiles_Click(object sender, EventArgs e)
+        private void btnInformacionTabla_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmConsultarPortatiles>();
-            btnConsultarPortatiles.BackColor = Color.FromArgb(81, 96, 90);
+            AbrirFormulario<frmInformacionTabla>();
+            btnInformacionTabla.BackColor = Color.FromArgb(81, 96, 90);
         }
         #endregion
         #region Procedimientos
@@ -106,14 +106,14 @@ namespace mvcComputersCompany
         }
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms["frmRegistrarEmpresa"] == null)
-                btnRegistrarEmpresa.BackColor = Color.FromArgb(45, 62, 64);
+            if (Application.OpenForms["frmAlmacenamiento"] == null)
+                btnAlmacenamiento.BackColor = Color.FromArgb(45, 62, 64);
 
-            if (Application.OpenForms["frmRegistrarPortatil"] == null)
-                btnRegistrarPortatil.BackColor = Color.FromArgb(45, 62, 64);
+            if (Application.OpenForms["frmListaRestricciones"] == null)
+                btnListaRestricciones.BackColor = Color.FromArgb(45, 62, 64);
 
-            if (Application.OpenForms["frmConsultarPortatiles"] == null)
-                btnConsultarPortatiles.BackColor = Color.FromArgb(45, 62, 64);
+            if (Application.OpenForms["frmInformacionTabla"] == null)
+                btnInformacionTabla.BackColor = Color.FromArgb(45, 62, 64);
         }
         private void btnConectar_Click(object sender, EventArgs e)
         {
@@ -122,9 +122,12 @@ namespace mvcComputersCompany
             ConnectionDB.conectar();
             if (ConnectionDB.boolStatus())
             {
-                btnRegistrarEmpresa.Enabled = true;
-                btnRegistrarPortatil.Enabled = true;
-                btnConsultarPortatiles.Enabled = true;
+                btnAlmacenamiento.Enabled = true;
+                btnListaRestricciones.Enabled = true;
+                btnInformacionTabla.Enabled = true;
+                txbUsuario.Enabled = false;
+                txbPassword.Enabled = false;
+                btnConectar.Enabled = false;
             }
             lblStatus.Text = ConnectionDB.stringStatus();
         }
