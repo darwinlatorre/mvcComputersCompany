@@ -1,5 +1,6 @@
 ﻿using System;
 using Oracle.DataAccess.Client;
+using System.Collections;
 using System.Data;
 
 namespace mvcComputersCompany.datos
@@ -8,22 +9,20 @@ namespace mvcComputersCompany.datos
     {
         static ConnectionDB atrConexionDB = new ConnectionDB();
 
-        public DataSet obtenerAlmacenamiento()
+        public double[] obtenerAlmacenamiento()
         {
-            DataSet varDataSet = new DataSet();
-            float varEspacioLibreMB = 0;
-            float varEspacioOcupadoMB = 0;
+            double[] vecAlmacenamiento = new double[2];
 
             atrConexionDB.CheckOpenConnection();
-            OracleCommand myCommand = new OracleCommand(ConnectionDB.getUser() + ".prcAlmacenamiento", atrConexionDB.getMyConnection());
+            OracleCommand myCommand = new OracleCommand("prcAlmacenamiento", atrConexionDB.getMyConnection());
             myCommand.CommandType = CommandType.StoredProcedure;
-            myCommand.Parameters.Add("Espacio Libre (MB)", OracleDbType.BinaryFloat, varEspacioLibreMB, ParameterDirection.Output);
-            myCommand.Parameters.Add("Espacio Ocupado (MB)", OracleDbType.BinaryFloat, varEspacioOcupadoMB, ParameterDirection.Output);
-            OracleDataAdapter myAdapter = new OracleDataAdapter(myCommand);
-            myAdapter.Fill(varDataSet, "Espacio");
+            myCommand.Parameters.Add("Espacio Libre (MB)", OracleDbType.BinaryDouble, ParameterDirection.Output);
+            myCommand.Parameters.Add("Espacio Ocupado (MB)", OracleDbType.BinaryDouble, ParameterDirection.Output);
             myCommand.ExecuteNonQuery();
+            vecAlmacenamiento[0] = double.Parse(myCommand.Parameters["Espacio Libre (MB)"].Value.ToString());
+            vecAlmacenamiento[1] = double.Parse(myCommand.Parameters["Espacio Ocupado (MB)"].Value.ToString());
             atrConexionDB.CheckClosedConnection();
-            return varDataSet;
+            return vecAlmacenamiento;
         }
     }
 }

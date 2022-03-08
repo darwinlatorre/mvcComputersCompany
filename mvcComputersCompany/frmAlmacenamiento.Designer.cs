@@ -29,9 +29,11 @@ namespace mvcComputersCompany
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.chtAlmacenamiento = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblAlmacenamiento = new System.Windows.Forms.Label();
@@ -52,31 +54,56 @@ namespace mvcComputersCompany
             // chtAlmacenamiento
             // 
             this.chtAlmacenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
-            chartArea2.Name = "ChartArea1";
-            this.chtAlmacenamiento.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
-            legend2.Name = "Legend1";
-            this.chtAlmacenamiento.Legends.Add(legend2);
-            this.chtAlmacenamiento.Location = new System.Drawing.Point(125, 80);
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Area3DStyle.Inclination = 40;
+            chartArea1.Area3DStyle.IsRightAngleAxes = false;
+            chartArea1.Area3DStyle.PointDepth = 60;
+            chartArea1.Area3DStyle.PointGapDepth = 1000;
+            chartArea1.Area3DStyle.Rotation = 90;
+            chartArea1.Area3DStyle.WallWidth = 1;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
+            chartArea1.BorderColor = System.Drawing.Color.Empty;
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            this.chtAlmacenamiento.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
+            legend1.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chtAlmacenamiento.Legends.Add(legend1);
+            this.chtAlmacenamiento.Location = new System.Drawing.Point(25, 80);
             this.chtAlmacenamiento.Name = "chtAlmacenamiento";
             this.chtAlmacenamiento.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chtAlmacenamiento.Series.Add(series2);
-            this.chtAlmacenamiento.Size = new System.Drawing.Size(400, 400);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            dataPoint1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            dataPoint1.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint1.IsValueShownAsLabel = true;
+            dataPoint1.LabelForeColor = System.Drawing.Color.White;
+            dataPoint1.LegendText = "Espacio libre";
+            dataPoint2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            dataPoint2.IsValueShownAsLabel = true;
+            dataPoint2.LabelForeColor = System.Drawing.Color.White;
+            dataPoint2.LegendText = "Espacio ocupado";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            this.chtAlmacenamiento.Series.Add(series1);
+            this.chtAlmacenamiento.Size = new System.Drawing.Size(600, 400);
             this.chtAlmacenamiento.TabIndex = 3;
             this.chtAlmacenamiento.Text = "Almacenamiento";
             // 
             // lblAlmacenamiento
             // 
             this.lblAlmacenamiento.AutoSize = true;
-            this.lblAlmacenamiento.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlmacenamiento.Location = new System.Drawing.Point(12, 16);
+            this.lblAlmacenamiento.Font = new System.Drawing.Font("Cascadia Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlmacenamiento.Location = new System.Drawing.Point(12, 12);
             this.lblAlmacenamiento.Name = "lblAlmacenamiento";
-            this.lblAlmacenamiento.Size = new System.Drawing.Size(136, 21);
+            this.lblAlmacenamiento.Size = new System.Drawing.Size(166, 25);
             this.lblAlmacenamiento.TabIndex = 4;
             this.lblAlmacenamiento.Text = "Almacenamiento";
             // 

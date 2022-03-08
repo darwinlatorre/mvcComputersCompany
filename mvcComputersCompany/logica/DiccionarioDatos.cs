@@ -8,7 +8,7 @@ namespace mvcComputersCompany.logica
     {
         static DiccionarioDatosDB atrDiccionarioDatosDB = new DiccionarioDatosDB();
 
-        public DataSet obtenerAlmacenamiento()
+        public double[] obtenerAlmacenamiento()
         {
             return atrDiccionarioDatosDB.obtenerAlmacenamiento();
         }
