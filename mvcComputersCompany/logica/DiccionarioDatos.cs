@@ -12,5 +12,10 @@ namespace mvcComputersCompany.logica
         {
             return atrDiccionarioDatosDB.obtenerAlmacenamiento();
         }
+
+        public DataSet obtenerRestricciones()
+        {
+            return atrDiccionarioDatosDB.obtenerRestricciones();
+        }
     }
 }

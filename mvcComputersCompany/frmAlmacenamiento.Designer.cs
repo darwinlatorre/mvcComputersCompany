@@ -85,11 +85,11 @@ namespace mvcComputersCompany
             dataPoint1.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataPoint1.IsValueShownAsLabel = true;
             dataPoint1.LabelForeColor = System.Drawing.Color.White;
-            dataPoint1.LegendText = "Espacio libre";
+            dataPoint1.LegendText = "Espacio libre (MB)";
             dataPoint2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
             dataPoint2.IsValueShownAsLabel = true;
             dataPoint2.LabelForeColor = System.Drawing.Color.White;
-            dataPoint2.LegendText = "Espacio ocupado";
+            dataPoint2.LegendText = "Espacio ocupado (MB)";
             series1.Points.Add(dataPoint1);
             series1.Points.Add(dataPoint2);
             this.chtAlmacenamiento.Series.Add(series1);
