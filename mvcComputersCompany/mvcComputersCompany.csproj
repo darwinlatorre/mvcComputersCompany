@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datos\ConnectionDB.cs" />
+    <Compile Include="datos\DiccionarioDatosDB.cs" />
     <Compile Include="datos\EmpresaDB.cs" />
     <Compile Include="datos\PortatilDB.cs" />
     <Compile Include="frmAlmacenamiento.cs">
@@ -79,6 +80,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="logica\DiccionarioDatos.cs" />
     <Compile Include="logica\Empresa.cs" />
     <Compile Include="logica\Portatil.cs" />
     <Compile Include="Program.cs" />
