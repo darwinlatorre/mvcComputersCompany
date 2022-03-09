@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using mvcDatabaseInfo.logica;
 
@@ -26,10 +20,19 @@ namespace mvcDatabaseInfo
 
         private void btnObtener_Click(object sender, EventArgs e)
         {
-            chtAlmacenamiento.DataSource = atrDiccionarioDatos.obtenerNroFilasParticion(txtbTabla.Text);
-            chtAlmacenamiento.Series[0].XValueMember = "Nombre";
-            chtAlmacenamiento.Series[0].YValueMembers = "Numero de Filas";
-            chtAlmacenamiento.DataBind();
+            DataSet varDataSet = atrDiccionarioDatos.obtenerNroFilasParticion(txtbTabla.Text);
+            if (varDataSet.Tables[0].Rows.Count == 0)
+            {
+                lblStatus.Text = "No hay particiones";
+            }
+            else
+            {
+                lblStatus.Text = "";
+                chtInformacion.DataSource = atrDiccionarioDatos.obtenerNroFilasParticion(txtbTabla.Text);
+                chtInformacion.Series[0].XValueMember = "Nombre";
+                chtInformacion.Series[0].YValueMembers = "Numero de Filas";
+                chtInformacion.DataBind();
+            }
         }
     }
 }

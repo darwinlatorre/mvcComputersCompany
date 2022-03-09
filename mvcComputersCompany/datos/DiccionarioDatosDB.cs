@@ -1,6 +1,5 @@
 ﻿using System;
 using Oracle.DataAccess.Client;
-using System.Collections;
 using System.Data;
 
 namespace mvcDatabaseInfo.datos
@@ -55,8 +54,8 @@ namespace mvcDatabaseInfo.datos
 
         public DataSet obtenerNroFilasParticion(string prmTableName) 
         {
-            //try
-            //{
+            try
+            {
                 atrConexionDB.CheckOpenConnection();
                 OracleCommand myCommand = new OracleCommand("NroFilasParticion", atrConexionDB.getMyConnection());
                 myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor, ParameterDirection.Output);
@@ -68,12 +67,11 @@ namespace mvcDatabaseInfo.datos
                 myAdapter.Fill(varDataSet, "NroFilasParticion");
                 atrConexionDB.CheckClosedConnection();
                 return varDataSet;
-            //}
-            //catch (Exception)
-            //{
-
-            //    return new DataSet();
-            //}
+            }
+            catch (Exception)
+            {
+                return new DataSet();
+            }
         }
         
     }
