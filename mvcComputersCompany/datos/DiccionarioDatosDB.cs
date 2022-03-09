@@ -3,7 +3,7 @@ using Oracle.DataAccess.Client;
 using System.Collections;
 using System.Data;
 
-namespace mvcComputersCompany.datos
+namespace mvcDatabaseInfo.datos
 {
     class DiccionarioDatosDB
     {
@@ -32,7 +32,6 @@ namespace mvcComputersCompany.datos
                 return vecAlmacenamiento;
             }
         }
-
         public DataSet obtenerRestricciones()
         {
             try
@@ -45,6 +44,7 @@ namespace mvcComputersCompany.datos
                 OracleDataAdapter myAdapter = new OracleDataAdapter(myCommand);
                 DataSet varDataSet = new DataSet();
                 myAdapter.Fill(varDataSet, "Restricciones");
+                atrConexionDB.CheckClosedConnection();
                 return varDataSet;
             }
             catch (Exception)
@@ -52,5 +52,29 @@ namespace mvcComputersCompany.datos
                 return new DataSet();
             }
         }
+
+        public DataSet obtenerNroFilasParticion(string prmTableName) 
+        {
+            //try
+            //{
+                atrConexionDB.CheckOpenConnection();
+                OracleCommand myCommand = new OracleCommand("NroFilasParticion", atrConexionDB.getMyConnection());
+                myCommand.Parameters.Add("P_CURSOR_DATOS", OracleDbType.RefCursor, ParameterDirection.Output);
+                myCommand.Parameters.Add("P_NOMBRE", OracleDbType.Varchar2, prmTableName, ParameterDirection.Input);
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                OracleDataAdapter myAdapter = new OracleDataAdapter(myCommand);
+                DataSet varDataSet = new DataSet();
+                myAdapter.Fill(varDataSet, "NroFilasParticion");
+                atrConexionDB.CheckClosedConnection();
+                return varDataSet;
+            //}
+            //catch (Exception)
+            //{
+
+            //    return new DataSet();
+            //}
+        }
+        
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace mvcComputersCompany
+namespace mvcDatabaseInfo
 {
     partial class frmInformacionTabla
     {
@@ -65,6 +65,11 @@ namespace mvcComputersCompany
             // chtAlmacenamiento
             // 
             this.chtAlmacenamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(242)))), ((int)(((byte)(231)))));
             chartArea1.Name = "ChartArea1";
             this.chtAlmacenamiento.ChartAreas.Add(chartArea1);
@@ -75,9 +80,12 @@ namespace mvcComputersCompany
             this.chtAlmacenamiento.Name = "chtAlmacenamiento";
             this.chtAlmacenamiento.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
+            series1.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 3;
+            series1.Name = "Numero de filas";
+            series1.SmartLabelStyle.CalloutLineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series1.SmartLabelStyle.Enabled = false;
             this.chtAlmacenamiento.Series.Add(series1);
             this.chtAlmacenamiento.Size = new System.Drawing.Size(600, 400);
             this.chtAlmacenamiento.TabIndex = 7;
@@ -87,7 +95,7 @@ namespace mvcComputersCompany
             // 
             this.lblTabla.AutoSize = true;
             this.lblTabla.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTabla.Location = new System.Drawing.Point(161, 472);
+            this.lblTabla.Location = new System.Drawing.Point(61, 472);
             this.lblTabla.Name = "lblTabla";
             this.lblTabla.Size = new System.Drawing.Size(56, 17);
             this.lblTabla.TabIndex = 8;
@@ -96,18 +104,19 @@ namespace mvcComputersCompany
             // btnObtener
             // 
             this.btnObtener.Font = new System.Drawing.Font("Cascadia Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObtener.Location = new System.Drawing.Point(525, 465);
+            this.btnObtener.Location = new System.Drawing.Point(466, 465);
             this.btnObtener.Name = "btnObtener";
             this.btnObtener.Size = new System.Drawing.Size(100, 30);
             this.btnObtener.TabIndex = 9;
             this.btnObtener.Text = "Obtener";
             this.btnObtener.UseVisualStyleBackColor = true;
+            this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
             // 
             // txtbTabla
             // 
-            this.txtbTabla.Location = new System.Drawing.Point(311, 472);
+            this.txtbTabla.Location = new System.Drawing.Point(123, 472);
             this.txtbTabla.Name = "txtbTabla";
-            this.txtbTabla.Size = new System.Drawing.Size(100, 20);
+            this.txtbTabla.Size = new System.Drawing.Size(184, 20);
             this.txtbTabla.TabIndex = 10;
             // 
             // frmInformacionTabla

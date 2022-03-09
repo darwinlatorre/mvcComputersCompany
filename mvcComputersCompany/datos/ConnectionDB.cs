@@ -2,7 +2,7 @@ using Oracle.DataAccess.Client;
 using System;
 using System.Data;
 
-namespace mvcComputersCompany.datos
+namespace mvcDatabaseInfo.datos
 {
     public class ConnectionDB
     {

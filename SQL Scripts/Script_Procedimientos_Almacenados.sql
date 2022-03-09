@@ -33,3 +33,17 @@ END prcRestriccionesUsuarioActual;
 create public synonym prcRestriccionesUsuarioActual for PRCRESTRICCIONESUSUARIOACTUAL;
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Storage procedure to the number of row for each partition has -----------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE NroFilasParticion(P_CURSOR_DATOS IN OUT SYS_REFCURSOR, P_NOMBRE USER_TAB_PARTITIONS.PARTITION_NAME%TYPE)
+IS
+BEGIN
+    OPEN P_CURSOR_DATOS FOR
+        SELECT PARTITION_NAME "Nombre", NUM_ROWS "Numero de Filas" 
+        FROM USER_TAB_PARTITIONS
+        WHERE TABLE_NAME LIKE P_NOMBRE
+        ORDER BY PARTITION_NAME;
+END NroFilasParticion;
+
+CREATE PUBLIC SYNONYM NroFilasParticion FOR NROFILASPARTICION;
+----------------------------------------------------------------------------------------------------------------------------------------------

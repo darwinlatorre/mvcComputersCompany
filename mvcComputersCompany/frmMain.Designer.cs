@@ -1,5 +1,5 @@
 ﻿
-namespace mvcComputersCompany
+namespace mvcDatabaseInfo
 {
     partial class frmMain
     {

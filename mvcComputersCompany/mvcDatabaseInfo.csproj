@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7EDDFE7C-B274-4E96-89D6-33AF99750857}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>mvcComputersCompany</RootNamespace>
-    <AssemblyName>mvcComputersCompany</AssemblyName>
+    <RootNamespace>mvcDatabaseInfo</RootNamespace>
+    <AssemblyName>mvcDatabaseInfo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="datos\ConnectionDB.cs" />
     <Compile Include="datos\DiccionarioDatosDB.cs" />
-    <Compile Include="datos\EmpresaDB.cs" />
-    <Compile Include="datos\PortatilDB.cs" />
     <Compile Include="frmAlmacenamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +79,6 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="logica\DiccionarioDatos.cs" />
-    <Compile Include="logica\Empresa.cs" />
-    <Compile Include="logica\Portatil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAlmacenamiento.resx">

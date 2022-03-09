@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
-using mvcComputersCompany.datos;
+using mvcDatabaseInfo.datos;
 
-namespace mvcComputersCompany.logica
+namespace mvcDatabaseInfo.logica
 {
     class DiccionarioDatos
     {
@@ -16,6 +16,11 @@ namespace mvcComputersCompany.logica
         public DataSet obtenerRestricciones()
         {
             return atrDiccionarioDatosDB.obtenerRestricciones();
+        }
+
+        public DataSet obtenerNroFilasParticion(string prmTableName) 
+        {
+            return atrDiccionarioDatosDB.obtenerNroFilasParticion(prmTableName);
         }
     }
 }

@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using mvcComputersCompany.datos;
+using mvcDatabaseInfo.datos;
 
-namespace mvcComputersCompany
+namespace mvcDatabaseInfo
 {
     public partial class frmMain : Form
     {

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Windows.Forms.DataVisualization.Charting;
-using mvcComputersCompany.logica;
+using mvcDatabaseInfo.logica;
 
-namespace mvcComputersCompany
+namespace mvcDatabaseInfo
 {
     public partial class frmAlmacenamiento : Form
     {
