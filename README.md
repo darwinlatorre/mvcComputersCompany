@@ -8,6 +8,6 @@
   <br/>
   Technologies have been use:
   <br/>
-    <img src="https://img.shields.io/badge/-C Sharp-05122A?style=for-the-badge&logo=C Sharp&logoColor=682876"/>
+    <img src="https://img.shields.io/badge/-C #-05122A?style=for-the-badge&logo=C Sharp&logoColor=682876"/>
   <br/>
 </p>
